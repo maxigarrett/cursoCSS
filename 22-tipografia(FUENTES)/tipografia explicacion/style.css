@@ -1,0 +1,160 @@
+.title
+{
+    /* se usa para cuando el usuario va a leer es la mas comoda para leer
+    font-family: sans-serif; */
+
+    /* no es cursiva se utiliza para emular tipografías manuscritas
+    font-family: cursive; */
+
+    /* tipo de letras con adornos
+    font-family: fantasy; */
+
+    /* /* hace que todos los caracteres tengan la misma separacion o el mismo ancho 
+    se utiliza dentro de la etiqueta pre para fragmentos de codigo en nuestra pagina
+     
+    font-family: monospace; */
+
+
+    /* Se utiliza el nombre propio de la fuente o una familia genérica, se recomienda utilizar SIEMPRE fuentes de reserva 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif las fuentes reserva significa que si el primer 
+    valor la maquina del usuario no la 
+    encuentra tomara el segundo valor que en el ejemplo es Times y si no la tercera y asi sucesivamente todas las que queramos
+   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif */
+
+
+
+    /* font-size: 50px;medida absoluta ya que 50 px siempre van a ser esos en cualquier navegador */
+
+    font-size: 2em;
+}
+
+/* si utilizamos porcentaje y al spam le ponemos 100% sera el mismo tamaño que H1 pero si al espam le ponemos 200% sera el
+doble del H1 pero no es habitual dar porcentaje en tamaños de letras */
+.spam
+{
+    /* em: medida relativa al contexto (al padre, es decir si dentro de un titulo H1 encerramos una parte del texto en un
+     espam y le damos una clase y el H1 ya tenia una medida de 2em si al espam le ponemos 2em tomara los 2 em del padre
+     que es el H1 y sumarà 2em mas que tiene el spam que es hijo de H1 entoces si ponemos rem sera relativa a todo el
+     documento padre que es h1 con clase title) */
+    /* font-size: 2em; font-size: 2rem;
+
+    font-size:200%; */
+}
+
+
+
+
+/*  SOBREESCRIBIMOS TITLE y SPAM*/
+/*  (relativas al viewport)
+            vh: medida relativa al height del viewport
+            vw: media relativa al width del viewport
+            vmin: medida relativa al valor mínimo de viewport
+            vmax: medida relativa al valor máximo de viewport */
+
+.title
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1vw;/*1 porciento del ancho del viewport(no se utiliza mucho)*/
+    font-size: 1vh;/*1 porciento del alto del viewport(no se utiliza mhcho)*/
+
+    /* estas se utilizan en responcive */
+    /* 10vmin lo que hace es la medida relativa al valor minimo del viewport,es decir, si achicamos la pantalla tomará el ancho
+    poruqe al achicar la pantalla va a ser mas chico el ancho que el largo ya que la pantalla la encogimos  se utliza muchisimo en responsive */
+    font-size: 10vmin;
+
+    /* en este caso ahora toma el 10 porciento del maximo osea toma el maximo de si es mas ancho que largo o mas largo que
+    ancho osea si es mas ancho que alto toma el 10 porciento del ancho y el texto se ajusta */
+    font-size: 5vmax
+}
+
+
+/* font-weight: Establece el grosor de la fuente
+bold | normal | 100-900(tipografia2.html lo utilizaremos cuando descarguemos fuente de google font y podremos establecer un grosor entre esas medidas) */
+
+.paragraph
+{
+    font-weight: bold;
+}
+
+/* font-style: Establece el estilo de la tipografía
+normal | italic | oblique */
+.paragraph
+{
+    font-style: oblique;
+}
+/* --------------------------HASTA ACA ES TODO LO DE FONT */
+
+
+
+
+/* text-transform: convierte la letra en mayusculas o minusculas */
+
+.title
+{
+    text-transform: uppercase;/*mayusculas*/
+    text-transform: lowercase;/*texto en minusculas*/
+    text-transform: capitalize;/*cada comienzao de una palabra la primera letra la pone en maysusculas*/
+}
+
+
+
+/* text-aling: alinea el texto a la derecha,izquierda, justificado o centrado 
+center- left-rigth-justify  solo funciona en elemento en bloque*/
+.paragraph
+{
+    /* text-align: justify; no se utiliza en desarrollo web queda feo */
+    text-align: center;
+}
+
+
+/* 
+text-decoration:decora la letra con una linea
+overline: dibuja la linea del link por arriba
+line-trought: dibuja una linea en el medio del link como si lo tachara
+underline: por defecto linea por debajo del link
+none: niinguna decoracion */
+
+.link
+{
+    /* linea por arriba del link */
+    text-decoration: overline;
+    text-decoration: underline;/*por debajo*/
+    text-decoration:line-through ;/*tachado*/
+    text-decoration:none ;/*sin linea*/
+}
+
+
+
+/* text-indent: hace una indentacion para temas estetico, osea mueve la primera linea de texto(solo elementos de bloque) */
+.paragraph
+{
+    text-indent: 30px;
+}
+
+
+
+/* line-heigth: determina el alto de la linea  */
+.box
+{
+    width: 300px;
+    height: 100px;
+    background-color: red;
+}
+.box__item
+{
+    /* si queremos alinearlo al medio le damos los mismos pixeles de alto que tiene el box pero solo funcionacuando tenemos 
+    elementos que ocupan una linea si escrivimos mas no funcionara ya que el texto
+    sobreante lo desplazará hacia abajo y tendriamos que agrenadar el alto de la caja
+    ya que otra linea ocupa 100px osea serian 200 pixeles si tuvieramos otros contnedor
+    con ese texto que se desplaza si estaria centrado */
+    line-height: 100px;
+    text-align: center;
+}
+
+
+/* letter-spacing: establece la separacion entre letras ya que podemos traer un fuente que tengo un espacio que no nos guste esntoces podemos modificarlo */
+.paragraph
+{
+    letter-spacing: 30px;
+}

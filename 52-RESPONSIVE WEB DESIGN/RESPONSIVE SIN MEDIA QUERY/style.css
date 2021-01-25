@@ -1,0 +1,70 @@
+/* banner con uidades de viewport
+footer siempre abajo
+respinsive con flexbox
+responive con grid */
+
+
+/* solucion del problema de poner el footer abajo(unas de las osibilidades) */
+body
+{
+    margin: 0;
+    font-family: sans-serif;
+    background-image: radial-gradient(purple,black);
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    min-height: 100vh;/*le decios que el body ocupe toda la pagina para colocar pero con esto el footer no irá abajo*/
+    /* display: flex;
+    flex-direction: column; */
+
+    /* tambien se puede con display:grid */
+    display: grid;
+}
+
+
+.footer
+{
+    background-color: red;
+    padding: 1em;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top:200px;/*tambien le podemos dar en pixeles porque por ahi el footer al achicarse se sube un poco
+      /* margin-top:auto;le damos display flex al body un column en su direccion y a el footer margin-top:auto y se irá abajo */
+     
+}
+
+/* cuando le damos un banner que queda bien para pc pero para mobil queda muy grande lo recomendable es al padding es trabajar
+con unidades de viewport */
+.banner
+{
+    background-color: blue;
+    padding: 10vmin;/*se ajusta*/
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* hacer responsive con felxbox  los parrafos dentro
+.flexbox
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* el parrafo dentro de el div flexbox */
+/*.flexbox__item
+{
+    margin: 2rem;
+    min-width: 320px;
+
+    /* le decimos que se encoja y se agrande todo lo que pueda primer valor pertenece al flex-grow, segundo parametro pertenece
+    a flex-shrink y 200 de flex-basis osae le dice lo que tiene que ocupar antes de encojerse o agrandarse 
+    flex: 1 1 320px;
+} */
+
+/* hacer lo mismo que con flex pero con GRID para hacer el texto o cualquier elemnto responsive */
+.grid
+{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr)) ;
+    padding: 40px;
+}

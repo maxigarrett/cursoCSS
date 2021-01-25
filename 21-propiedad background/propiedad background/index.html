@@ -1,0 +1,73 @@
+<!-- PROPIEDAD BACKGROUND: es una propiedad que nos permite darle un fondo a las cajas.
+
+esta propiedad es un shorthand(propiedad acortada o abreviada ya que hay background-image,-color,etc),
+ la lista de propiedades que incluye backgroun son:
+    *background-color:Nos permite establecer un color de fondo
+  
+    *background-image:Nos permite establecer una imagen de fondo
+ 
+    *background-repeat:Nos permite establecer si un fondo se repite o no
+    repeat-x|repeat-y|no-repeat
+  
+    *background-position: Nos permite establecer la posicion del background
+         left top
+         left center
+         left bottom
+         right top
+         right center
+         right bottom
+         center top
+         center center
+         center bottom
+         x% y%
+         xpos ypos
+         initial
+         inherit
+    
+    *background-size:Nos permite establecer el tamaño de background
+         Establece el tamaño de la imagen de fondo
+         x [y]|auto|cover|contain. 
+        el valor en y es opcional, si no se lo ponemos lo calcula automáticamente
+        
+       * cover cubre la caja por completo, aunque la imagen escape del contenedor(puede haber duplicado)
+        
+       * contain la imagen se ajusta al contenido(no se duplica)
+  
+   *background-origin:Nos permite establecer desde donde se empezará a dibujar el fondo
+        parecido a clip pero lo que hace es redimensionar para que las cosas quepan 
+  
+   *background-clip:Nos permite establecer en que parte de la caja se dibujará el fondo 
+    Muestra la imagen desde donde le decimos, solo oculta, NO redimensiona
+        *border-box(es el valor que tiene por defecto osea se extiende hasta el border box es decir el borde)
+        *padding-box(solo se extendera hasta el padding si le damos un color de fondo a una caja solo se extenderá hasta el padding)
+        *content-box(solo ocupa el contenido adrentro de border y padding)
+  
+   *background-attachmen:Nos permite establecer si el background es relativo a la caja o al viewport 
+    scroll|fixed
+
+al poner background solo para darle un color se estan sobreescribiendo todas estas propiedades osea podemos poner
+background y agregar una imagen o cualquiera de las demas propiedades-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>propiedad background</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">background</h1>
+    <div class="bg-color"></div>
+    <div class="bg-image"></div>
+    <div class="bg-size"></div>
+    <div class="bg-repeat"></div>
+    <div class="bg-position"></div>
+    <div class="bg-origin"></div>
+    <div class="bg-clip"></div>
+    <div class="bg-multiple"></div>
+    
+    <div class="bg-attachmen"></div>
+</body>
+</html>

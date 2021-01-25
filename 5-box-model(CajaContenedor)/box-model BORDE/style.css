@@ -1,0 +1,56 @@
+/*border 
+border-width se puede aplicar en:
+    px/em/rem/%
+    
+border-style admite :
+    none/hidden/dotted/dashed/solid/double/grooven/ridge/inset/outset/initial/ibherit;
+
+    *estas medidas dependen del navegador no recomendable porque cada navegador la interpreta diferente preferible
+    controlar nosotros manualmnete dandole pixel o em o un % con border-width
+    thick(ancho) borde ancho
+    medium(medio) borde medio
+    thin(fino) borde fino
+
+border-color podemos usar:
+    *los colores nativos de CSS/rgb/rgba/hsl/hsla/hexadecimal/transparent;
+
+para las propiedades independientes de los bordes ponemos por ejemplo border-top y aplicarle lo explicado arrìba
+    border-top-(width/ style / color)
+    border-right-(width/ style / color)
+    border-bottom-(width/ style / color)
+    border-left-(width/ style / color)
+    */
+
+.box-1, .box-2
+{
+    width: 200px;
+    height: 200px;
+    margin: 2em;/*1em=16px, 2em= 16*2 q serìa 32px*/
+}
+
+.box-1
+{
+    background-color: yellowgreen;
+    border: 5px solid red;
+   /* border-top: none;le decimos que el borde de arriba no lo tenga*/
+   
+   /*agrandamos el ancho del borde de arriba que es tranparente conseguira un efecto ya q desvanece un poco
+   las lineas del borde solid rojas de los costados*/
+   border-top-width: 100px;
+   
+   border-top-color: transparent;
+
+
+   /* border-style: solid dotted;solid se aplica eje Y(arriba,abajo) dotted eje X(derecha , izquierda)*/
+
+    /*border-top-width: 8px;màs ancho al borde de arriba*/
+}
+.box-2
+{
+    background-color: lightseagreen;
+    border-left-width: 5px;/*ancho del borde izquierdo*/
+    border-left-style: dotted;/*borde del lado izquierdo de puntos se da con style*/
+    border-left-color: blue;/*le damos un color a ese borde izquierdo*/
+
+    border: 5px dotted blue;/*lo aplicamos a toda la caja en una sola linea*/
+}

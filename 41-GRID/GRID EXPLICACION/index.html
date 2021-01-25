@@ -1,0 +1,59 @@
+<!-- 
+    GRID:
+     Es un modelo de layout que permite construir grillas o cuadriculas dinamicas. Es un valor de la propiedad display
+     Al igual que con flexbox, tenemos display:grid y display:inline-grid(funcina igual que con flexbox)
+     Se necesita un contenedor (grid-container) y al menos un hijo (grid-item)
+     las celdas son los items, el contenedor es el contexto al que pertenecen los items
+     ----------------------------------------------------------------------|
+     |                     |                              |                |
+     |            a        |            b                 |       c        | esto ceria una cuadricula
+     |---------------------|------------------------------|----------------|
+     |                     |                              |                |
+     |           d         |                     e        |      f         |
+     |                     |                              |                |
+     |----------------------------------------------------------------------
+
+
+grid column: Es cada columna de nuestra cuadrícula.
+grid row: Es cada fila de nuestra cuadricula.
+grid cell: Es cada celda de nuestra cuadricula.
+grid gap: Sería la separacion entre celdas.
+grid line: Existem column lines y roe lines, son la lineas que delimitan cada columna/fila respectivamente. Es decir, 
+           en el dibujo que tenemos mas arriba las column line serian las verticales y row lines son las horizontales y se 
+           cuentan de 1 a n osea hasta donde creemos. En este dibujo tnenmos 4 column lines(todas las lineas verticales)
+           y 3 row lines(todas la horizontales) es decir que si tenemos dos filas tendremos 3 lineas y tres columnas tendremos 
+           4 lineas verticales a como muestra la imagen   
+
+
+VENTAJAS:
+    *en grid cada celada es dinamica y el resto de la cuadricula se adapta(redimensionar cada celda).
+    *podemos decir donde empieza cada celda y donde acaba,tanto en columna como en fila.es decir,le podemos decir que empiece en 
+    la linea 1 y que acabe en la linea tre por ejemplo.   
+    *sus posibilidades son inmensas y su soporte es total meno en internet explorer-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid__item">A</div>
+        <div class="grid__item">B</div>
+        <div class="grid__item">C</div>
+        <div class="grid__item">D</div>
+        <div class="grid__item">E</div>
+        <div class="grid__item">F</div>
+        <div class="grid__item">G</div>
+        <div class="grid__item">H</div>
+        <div class="grid__item">I</div>
+        <div class="grid__item">J</div>
+        <div class="grid__item">K</div>
+        <div class="grid__item">L</div>
+    </div>
+</body>
+</html>

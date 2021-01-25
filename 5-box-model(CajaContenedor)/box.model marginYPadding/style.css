@@ -1,0 +1,31 @@
+.box-1
+{
+    width: 200px;
+    height: 200px;
+    background: lightgreen; 
+    /*margin: 1em 2em 3em 4em;  1em so 16px si ponemos 2em seri 16*2=32px*/
+
+
+    /*es lo mismo pero especificamos por separado se puede hacer lo mismo pero con paddin*/
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-bottom: 3em;
+    margin-left: 4em;
+}
+
+.box-2
+{
+    width: 200px;
+    height: 200px;
+    background: lightcoral;
+    border: 2px solid blue; 
+    padding: 1em 2em 3em 4em;
+}
+
+.box-2-content
+{
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    border: 2px solid red; 
+}

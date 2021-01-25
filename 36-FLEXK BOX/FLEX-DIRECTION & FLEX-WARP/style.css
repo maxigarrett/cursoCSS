@@ -1,0 +1,50 @@
+.flex-container
+{
+    background-color: #fca170;
+    padding: .5em;/*ese 0 es para que el padding de el ejeX tenga 0*/
+
+     /* display: flex
+    Convierte el contenedor en un contexto para flexbox y hacee qu el contenedor sea un elemento de bloque para los elementos
+    que lo rodean. */
+    display: flex;/*si ponemos inline-flex se colocaria al lado del spam porque seria de linea ocupa lo que su contenido*/
+    flex-direction: row;/*no pasa nada por que es el valor por defecto*/
+
+    /*modificamos la direccion del main axis osea arranca de deracha a izquierda por lo que se ubican a la derecha del viewport*/
+    flex-direction: row-reverse;
+
+    /*modificamos los ejes ahora el main axis esta en el ejeY de arriba abajo por lo tanto el cross axis es ahora horizontal
+    de izquierda a derecha */
+    flex-direction: column;
+
+    /*ahora el main axis que esta vertical en ves de arrancar de arriba abajo arrancara de abajo hacia arriba osea ubicaremos
+    el main star en bot  */
+    flex-direction: column-reverse;
+
+
+
+    display: flex;
+    flex-direction: row;
+
+    /*  wrap: hace que los elementos que no quepan en una linea(manteniendo sus dimensiones, si las tuvieran) salten a la linea
+        inferior. si le damos mas ancho al flex-item al no ocupar a lo largo se ubican uno debajo de otro */
+    flex-wrap: wrap;
+
+
+    /* wrap-reverse: hace lo mismo que wrap pero en lugar de hacer que salten a la linea inferior, hace que salten a la linea 
+    superior (no se ssuele utilizar mucho) */
+    flex-wrap: wrap-reverse;
+
+    
+
+}
+
+.flex-item
+{
+    width: 250px;
+    height: 220px;
+    background-color: blueviolet;
+    text-align: center;
+    line-height: 30px;
+    margin: .5em;
+    color: aliceblue;
+}

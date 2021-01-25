@@ -1,0 +1,99 @@
+<!-- *PSEUDOCLASES son selectores que reaccionan en tiempo real detectado la interaccion del usuario con algunos elementos.
+    ,es decir, que con la pseudoclases podemos añadir un evento de escucha osea un evento di tipo raton(clic),teclado,etc
+
+    *funcionan con todos los selectores de css decendientes,hermanos,hijo directo,etiqueta, de clase,de id,etc
+
+    *no estan atados a ningun elemento,es decir, las pseudoclases aveces las pondremos sin ningun selector. simplemente pondremos
+    las pseudoclases y punto.
+    
+    *su sintaxis es:
+        *en el caso de que haya un selector
+            selector:pseudoclase
+            {
+                estilo
+            }
+        *en el caso de que no haya un selector
+            :pseudoclase
+    
+    estas pseudoclases se representan con un dos puntos solo al contrario de un pseudoelemento que lleva 2 (::)   
+
+
+
+     ejemplos en pseudoclases.html
+    pseudoclases dinamicas(las que tienen link etre parentesis es que solo sirven para aplicarse a links):
+        :link(links) link no visitado
+        :visited(links) link no visitado
+        :hover al poner el mause sobre el elemento se activa el estilo
+        :active(links) el momento del click
+        :focus cuando el elemento tiene el foco
+    
+    target
+        :target elemento que es objetivo de un marcador o ancla
+    
+    Lenguaje
+        :lang() elemento que contiene el atributo lang que especifica en que idioma esta escrito es parte del texto
+    
+   
+        
+    ejemplos en pseudoclases2 de estados formularios
+    UI States(las de estado)
+    :enable
+    :diseable
+    :checked
+    :in-range
+    :out-of-range
+    :required
+    :optional
+    :valid
+    :invalid
+    :fullscreem
+
+   
+     ejemplos en pseudoclases3.html
+    Structural
+    :root
+    :nth-child()
+    :nth-last-child()
+    :nth-of-type()
+    :nth-last-of-type()
+    :first-child
+    :last-child
+    :first-of-type
+    :last-of-type
+    :only-child
+    :only-of-type
+    :empty
+
+    Negation
+    :not()-->
+
+
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes,minimum-sclalable=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pseudoclases Dynamicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body class="body">
+    <h1 class="title">Pseudoclases</h1>
+
+    <a class="link" href="#">soy un enlace no visitado</a>
+    <a href="" class="link2">soy un enlace visitado</a>
+    <a href="#" class="buttom">button</a>
+    <input class="input" type="text">
+    <br>
+    <a class="texto-menu" href="#texto">ir al texto</a>
+    <p class="text" id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ea nostrum nesciunt dicta 
+    eniti, similique mollitia itaque facere ipsa illo illum assumenda aut aliquam! Voluptas consequuntur ipsa quam quidem
+     maiores?</p>
+
+
+     <!-- esta ubicado abajo de todo por el top que tiene el texto -->
+     <span class="span" lang="es">hello word</span>
+     <span class="span" lang="en">hola mundo</span>
+</body>
+</html>

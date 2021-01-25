@@ -1,0 +1,30 @@
+<!--el valor RELATIVE hace que el elemento se coloque respecto a su posicion en el flujo esto significa que cuando 
+nosotros agregamos position: relative; a un elemento visualmente no pasa nada osea el elemento va a seguie en el
+mismo sitio donde se encontraba
+
+por detras pasan varia cosas: 
+    *al moverlo el elemnto conserva su espacio reservado osea creamos una caja con un div y le ponemos 
+    
+    position: relative; 
+    top:100px;
+       
+esto creara un espacio arriba y la caja se desplazara hacia abajo pero y el espacio que quede en blanco quedarà
+ahì ya que su espacio reservado no se modifica aunque la imagen de la caja se corra hacia abajo 
+osea si tenemos dos parrafos un un div al medio al mover el div hacia abajo el parrafo no subirà porque
+el div sigue teniendo su espacio reservado-->
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POSITION RELATIVE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="box1"> BOX 1</div>
+    <div class="box2"> BOX 2</div>
+
+</body>
+</html>

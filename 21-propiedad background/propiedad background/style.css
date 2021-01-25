@@ -1,0 +1,123 @@
+[class^='bg-']
+{
+    display: inline-block;
+    width: 30%;
+    height: 150px;
+    border: 1px solid red;
+}
+body
+{
+    padding-bottom: 50em;
+    text-align: center;
+}
+
+
+.bg-color
+{
+    background-color: purple;
+}
+
+/*esta imagen es muy grande por lo que se verá muy poco  */
+.bg-image
+{
+    background-image: url(logo.png);
+}
+
+/* a la imagen le damos un tamaño */
+.bg-size
+{
+    background-image: url(cafe.jpeg);
+    /* background-size: contain; se ajusta al contenido de la caja osea ocupa todo lo que pueda la imagen aunque es posible que no rellene toda la caja */
+    /* background-size:10% 10%; */
+    background-size: cover;/*cubre todo el contenedor pero cubre todo es posible que no se vea toda la foto*/
+
+}
+
+
+/* puede admitir repeticion o no y ubicarlo en eje X e Y tambien se puede dar tamaño,etc */
+.bg-repeat
+{
+    background-image: url(logo.png);  
+    background-size: 20%; 
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x; repite en el eje x */
+     /* background-repeat: repeat-y; repite en el eje y */
+}
+
+/* establece la posicion de la imagen */
+.bg-position
+{
+    background-image: url(logo.png);  
+    background-size: 20%; 
+    background-repeat: no-repeat;
+    background-position: top right;/*tambie se le puede dar en pixel px para desplazarlos q cualquier lugar de la caja*/
+
+}
+
+/* Nos permite establecer desde donde se empezará a dibujar el fondo Nos permite establecer desde donde se empezará a dibujar
+ el fondo es parecido a clip pero lo que hace es redimensionar para que las cosas quepan 
+ a diferencia de clip este la imagen arranca del contenido si le ponemos background-origin: content-box y se verá toda la img
+ dentro del contenido a diferencia de clip que arranca del borde pero si le ponemos background-clip: content-box mostrará
+ la imagen en el contenido pero arrancara del borde y no del contenido y lo que no quepa no se vera en resumen en ORIGIN la
+ imagen se verá completa 
+ origin redimenciona y ocupa la zona que le decimos 
+ clip recorta la imagen y no redimenciona */
+.bg-origin
+{
+    border: 5px dotted red;
+    padding: 25px;
+    background-image: url(cafe.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-origin: border-box; se dibuja desde el borde para adrento de la caja */
+    /* background-origin: padding-box; */
+    background-origin: content-box;/*lo que ocupe el contenido esta dentro de el borde y de padding*/
+
+
+}
+
+
+/*  *background-clip:Nos permite establecer en que parte de la caja se dibujará el fondo 
+    Muestra la imagen desde donde le decimos, solo oculta, NO redimensiona
+        *border-box(es el valor que tiene por defecto osea se extiende hasta el border box es decir el borde)
+        *padding-box(solo se extendera hasta el padding si le damos un color de fondo a una caja solo se extenderá hasta el padding)
+        *content-box(solo ocupa el contenido adrentro de border y padding si no le damos padding no se verá y ocupara todo el 
+        contenido) */
+.bg-clip
+{
+    border: 5px dotted red;
+    background-color: blue;
+    background-clip: content-box;
+    padding: 25px;
+}
+
+
+
+
+
+ .bg-attachmen
+{
+    width: 100%;
+    height: 300px;
+    background-image: url(cafe.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* la imagen se pone relativo al viewport y no al contenedor por lo que tenemos el efecto paralax */
+    background-attachment: fixed;
+
+} 
+
+
+/* al usar dos imagenes las podemos superponer usando  background-image: url(logo.png), url(cafe.jpeg) ; y para modificar
+las dos al mismo tiempo solo usamos  background-repeat: no-repeat; por ejemplo y se aplica a los dos 
+pero si queremos aplicarle por separado tendremos que poner una propiedad y separa dos valores con coma 
+ background-position: bottom,center; el primer valor aplica a la primer imagen embevida y el segundo valor a la segunda imagen  */
+.bg-multiple
+{
+    background-image: url(logo.png), url(cafe.jpeg) ;
+    background-size: 10%,cover;
+    background-repeat: no-repeat;
+    background-position: bottom,center;
+    background-attachment: scroll,fixed;
+    
+}

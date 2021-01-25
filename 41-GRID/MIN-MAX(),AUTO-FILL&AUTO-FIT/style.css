@@ -1,0 +1,60 @@
+body
+{
+    
+   
+    height: 100vh;/*para que quede al medio del body*/
+    background-image: radial-gradient(circle, purple,black);
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    color: #eee;
+
+}
+.grid-container
+{
+   display: grid;
+   /* justify-content: center; */
+  
+   /* minmax():
+      recibe dos parametros para establecer el minimo y el maximo que pueden tener los items.
+      grid-template-columns:repeat(2,minmax(100px, 1fr))
+      le decimos que como minimo tenga 70px y como maximo 1fr caundo achiquemos la pantalla hasta a 70px se mostrara nornal pero
+      si achicamos mas no se mostrara y saldra un scroll */
+   grid-template-columns: repeat(3,minmax(70px,1fr));
+
+   /* junto con minmax vienen una opalabras claves que son:
+   min-content: minimo necesario en funcion del contenido.es decir que se mostrara en pantalla hasta lo que ocupe el contenido
+   max-content: maximo necesario en funcion del contenido. */
+
+   grid-template-columns: repeat(3,minmax(min-content,1fr));
+
+   /* con max-content  si ponemos un parrafo dentro se ubica una linea y no rompe hacia abajo se queda en una linea aunque no se
+   muestre bien. esto biene bien para cuando tenemos imagenes y un pie de imagen con una descrpcion si esa descripcion o titulo
+   de la foto no queremos que se rompa en varias lineas utilizando esta opcion podemos evitar que esto ocurra*/
+   grid-template-columns: repeat(3,minmax(max-content,1fr));
+
+
+
+   /* auto-fill:crea tantos grid-items vacios como quepan en el viewport respetando las medidas.osea que las primeras cajas cradas
+   tienen 1fr como maximo pero como tiene auto-fill no permite que los elemntos crezcan mas porque crea celdas adicionales vacias
+   a todo el ancho del viewport (queda responsive sin mediaquery y saltan hacia abajo si no caben) */
+      grid-template-columns: repeat(auto-fill,minmax(80px,1fr));
+
+      /* auto-fit: elimina los grid-items vacios que no se esten ocupando.lo uqe pasa es que este elimina las celdas vacias y
+      la cajas crecen porque elimina las cajas que no se estan usando y permite crecer al resto de elemntos 
+      (tambien responsive pero ocupan todo el ancho del vievport o hasta que encuntra otro elemento al lado osea el espacio 
+      disponible)*/
+      grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+}
+
+.grid__item
+{
+    /* width: 400px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: inherit;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}

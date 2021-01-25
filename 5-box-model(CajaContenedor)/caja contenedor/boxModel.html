@@ -1,0 +1,47 @@
+<!--en la web todo son cajas, las etiquetas HTML se pueden representar con un ancho 
+y un largo y el naveador lo construye como cajas,al conjunto de estas cajas todas y  la forma en q el navegador los
+ dibujo se llama LAYOUT
+
+la propiedades principales de las CAJAS son el ancho(width) y alto(heigth)
+
+hay dos tipos de elemento en HTML, los elementos en linea(inline) y de bloque(block) estas propiedades se pueden
+modificar con el atributo display 
+los elemento INLINE:
+    *son elementos que solo ocupan su contenido
+    *y no se pueden modificar ni su ancho ni su alto ejemplo <a> es un elemento in linea si tenemos escrita la palabra
+    enlace solo ocupara lo que ocupe esa palabra tanto en ancho como en alto. si se puede modificar el margen de sus lados
+    otro elemento inline seria la etiqueta <spam></spam>
+
+Elementos Block:
+    *ocupan todo el ancho disponible y a eso se lo denomina viwport
+    *se les puede asignar un ancho y alto
+
+cuando dibujamos una caja sus propiedades son:
+    *contenido:se ubucaria en el centro de la caja
+    *padding: la distacia que hay en tre el contenido y el borde
+    *borde: seguiria despues del paddion
+    *otline: se dibuja fuera del borde
+    *margin: serìa la distancias entre un elemento y otro se ubica fuera rodiando  de todo los demas dicho-->
+
+
+    <!DOCTYPE html>
+    <html lang="es" dir="auto">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BOX MODEL</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <h1>BOX MODEL</h1>
+        <h2>MODELO DE CAJA</h2>
+        <a href="#">Enlace 1</a>
+        <a href="#">Enlace 2</a>
+
+        <div class="box-1">Contenido 1</div>
+        <div class="box-2">Contenido 2</div>
+    </body>
+    </html>
+

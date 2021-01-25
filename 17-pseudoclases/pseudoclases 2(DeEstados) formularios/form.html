@@ -1,0 +1,61 @@
+<!--  UI States(las de estado) esclusivas para formulario
+    :enable se aplica a todos los campos del formularioque esten activados el enable visible es el estado normal del formulario
+            para que esten desactivados hay que aplicar a algun input del formulario un disiable
+
+
+
+    :diseable se le aplicara estilo a los que esten desactivados
+
+    :checked se aplica a los cheked
+
+    :in-range lo que aplica es cuando estamos en el rango que decidimos lo usaremos en un input:number
+
+    :out-of-range para cuando se salga de rango en los input:numbre se aplica esta clase yle da estilo que le pongamos nosotros
+  
+    :required atributo que se le da a un input para decirle que es requerido
+
+    :optional lo que conseguimos es saber si un campo es opcional por defecto son todos optional como diseable
+  
+    :valid comprueba que la informacion sea valida
+    :invalid comprueba que la informacion sea invalida
+
+    :fullscreem este elemento se aplica cuando esta en pantalla completa y no se usa a menudo-->
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>formularios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form action="#" class="form-principal">
+        <label class="label">:enabled</label>
+        <input class="input" type="text">
+        <label class="label">:diseable</label>
+        <input type="text" class="input" disabled>
+
+        <!-- ponemos al label el atributo for y un id al input con el valor checked para que al cliquear en el label cumpla 
+        la funcion del check -->
+        <input id="checkbox" type="checkbox" name="" id="" class="input">
+        <label for="checkbox" class="label">:checked</label>
+
+
+        <label class="label">:in-ranged</label>
+        <input type="number" name="" id="" class="input" min="50" max="60">
+        <label class="label">:out-of-range</label>
+        <input type="number" name="" id="" class="input" min="50">
+        <label class="label">:opcional</label>
+        <input type="text" name="" id="" class="input">
+        <label class="label">:required</label>
+        <input type="text" name="" id="" class="input" required>
+        <label class="label">:valid</label>
+        <input type="number" name="" id="" class="input">
+        <label class="label">:invalid</label>
+        <input type="number" name="" id="" class="input">
+    </form>    
+
+</body>
+</html>

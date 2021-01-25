@@ -1,0 +1,57 @@
+<!-- FELXBOX
+    display: flex(normalmente el que mas se utiliza)
+        Convierte el contenedor en un contexto para flexbox y hacee qu el contenedor sea un elemento de bloque para los elementos
+        que lo rodean.
+    display:inline-flex
+        Convierte el contenedor en un contexto para flexbox y hace que el contenedor sea un elemnto en linea para los elemntos que
+        lo rodean.
+    
+    flex-direction: row(default) |row-reverse | column | column-reverse
+        modifica la direccion y cual es el eje pricipal.
+        por defecto es row(horizontal de izquierda a derecha)
+        roe-reverse(horizontal de derecha a izquierda)
+        column (vertical de arriba abajo)
+        column-reverse(vertical de abajo arriba)
+        osea modifica la posicin del main axis y desde donde arranca (vertical) izq a dere, dere a izq, (horizontal) arri abaj, aba arri. 
+    
+        
+    flex-wrap: no-wrap(dafault) |wrap |wrap-reverse
+        controla si los elemntos saltarán de linea o no.
+        no-wrap: es el valor por defecto, un contenedor flex va a hacer que todos los elementos se queden en una linea si no le
+        especificamos lo contrario 
+        wrap: hace que los elementos que no quepan en una linea(manteniendo sus dimensiones, si las tuvieran) salten a la linea
+        inferior.
+        wrap-reverse: hace lo mismo que wrap pero en lugar de hacer que salten a la linea inferior, hace que salten a la linea 
+        superior (no se ssuele utilizar mucho) 
+       
+    
+    Existe un shorthan para flex-direction y flexwrap que es flex-flow ejemplo:
+        flex-flow:column(primer valor a direction) wrap(segundo valor a wrap)-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span>EJEMPLO</span>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+        <div class="flex-item">10</div>
+
+    </div>
+</body>
+</html>

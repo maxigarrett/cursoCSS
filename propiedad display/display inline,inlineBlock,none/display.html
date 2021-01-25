@@ -1,0 +1,47 @@
+<!-- *DISPLAY como se comporta las cajas e interactuan entre si
+    * esta propiedad nos permite definir como se comportarà una caja respecto a las cajas que tiene adyasentes
+    *de forma natural existen elementos en linea y elementos en bloque
+    los elementos en bloque ocupan todo el ancho de la pagina como una etiqueta div,p,h1 a6,etc
+    y los elementos en linea como etiqueta spam,a,etc que solo ocupan lo que ocupa su contenido y no se le puede dar margen o
+    padding arriba y abajo a diferencia de los estilos en bloque que se le puede dar margin y padding por todos sus lados
+    a los en linea solo aceptan margin y pading solo pos loa lados right left
+
+    los valores de esta propiedad Dispaly son:
+        *inline: Establece que la caja se comporta como si fuera un elemento en linea podemos hacer que un elemento de bloque
+        se comporte como uno de linea
+
+        *block:Establece que la caja se comporta como si fuera un elemento en bloque y se le puede aplicar a los de linea
+
+        *inline-block: Se comporta como un elemento en linea pero acepta width(ancho) y heigth(alto)
+
+        *none: Oculta el elemnto pero se sigue renderizando, es decir, si nosotros a una pagina web completa al body le 
+        pusieramos display:none no se mostraria nada pero los recursos se seguirian cargando tambien al desaparecer ya el 
+        naveador no respeta su espacio en el flujo porque lo toma que no hay nada
+        
+        *table: Imita el comportamiento de una tabla (desuso )
+    
+        *list-item: Imita el comportamientode una lista(desuso)
+    
+        *flex: Maquetar componentes por ejemplo un menu y hace que las cajas al cambiar de resolucion siguen en el mismo orden
+    
+        *grid:maquetar layout-->
+
+        
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0;user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    
+    <span class="inline">Soy un elemento en linea SPAM</span>
+    <span class="inline">Soy otro elemento en linea SPAM</span>
+    <p class="block">Soy un elemento de bloque P</p>
+
+</body>
+</html>

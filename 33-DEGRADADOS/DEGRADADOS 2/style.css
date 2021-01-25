@@ -1,0 +1,20 @@
+.box
+{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+
+   /* REPETIR DEGRADADOS forma antigua y dificil */
+   /* background-image: linear-gradient(45deg, blue 25%,red 25%,red 50%,blue 50%,blue 75%,red 75%);
+   background-size: 30px 30px; */
+
+   /* MAS SENCILLO le decimos que va a tener un grado de 70 que arranque de 0 y se hasta 10px, al azul le decimos que arranque de 
+   donde termina el rojo y valla hasta 20px para tener la misma proporcion que rojo 
+   si cambiamos los grados despues CSS calcula para que no se distorcione la imagen*/
+   background-image: repeating-linear-gradient(70deg, red 0,red 10px,blue 10px,blue 20px);/*lo mas comun*/
+   background-image: repeating-linear-gradient(70deg, red 0,blue 70px);/*cortes que no son solidos le sacamos los px a red*/
+
+
+   /* para hacer circulos */
+   /* background-image: radial-gradient(circle 20px, red 0,red 10px,blue 10px,blue 20px); */
+}

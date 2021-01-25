@@ -1,0 +1,69 @@
+body
+{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    background-image: radial-gradient(purple,black);
+    color: white;
+    font-family: sans-serif;
+}
+
+.grid-item
+{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header
+{
+    /* vamoa a establecer donde comienza y donde acaba el header */
+    grid-column:1/-1 ;
+}
+.aside
+{
+    
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.footer
+{
+    
+    grid-column: 1/3; 
+    background-color: chocolate;
+}
+
+.gallery
+{
+    /*le damos display grid a la galeria aunque el body ya tenga uno se puede anidar*/
+    display: grid;
+    /*creamos la grilla para las fotos le decimos que se repita dentro como primer parametro la medida que le damos es que se
+    auto-complete con celdas invisibles el segundo valor que es la medida de cada celda de la grilla le damos un minmax() como
+    primer parametro le decimos que tenga un minimo de 250px osea hasta 250 se puede achicar menor a esto saltara hacia abajo
+     y como maximo 1fraccion  */
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    padding: 3px;
+    /* centramos las imagenes en cada celda independientemente de su tamaño */
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: dense;/*calcule automaticamente como llenar lo huecos que sobran*/
+    
+}
+.gallery img
+{
+    padding: 3px;
+    width: 100%;/*para que se ajusten al tamaño de celda*/
+    height: 50vh;
+    object-fit: cover;/*para q no se deforme la imagen*/ 
+    /* clip-path: circle(36.1% at 50% 50%); */
+}
+
+/* .gallery img:nth-child(3)
+{
+    
+    grid-column: 2/ span 2;
+    
+   
+} */
+

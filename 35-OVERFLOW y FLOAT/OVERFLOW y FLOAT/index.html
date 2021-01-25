@@ -1,0 +1,51 @@
+<!-- Overflow
+    Es una propiedad que controla como se va a comportar la caja con el contenido que se desborde de ella
+    Es un shorthand que engloba overflow-x y overflow-y
+   
+    Tiene 3 valores posibles:
+    hidden: Oculta todo el contenido que se desborde
+    auto: Muestra la barra de scroll solo si hace falta
+    scroll: Muestra ambas barras de scroll independientemente de si se necesitan
+
+
+Float se utiliza pero apenas
+https://developer.mozilla.org/es/docs/Web/CSS/float
+https://developer.mozilla.org/es/docs/Web/CSS/clear
+
+La propiedad float especifica si un elemento debe salir del flujo normal y aparecer a la izquierda o a la derecha de su contenedor. los elementos de texto y los elementos en línea aparecerán a su alrededor.
+
+Tiene 3 valores posibles:
+    left: Flota el elemento a la izquierda del contendor
+    right: Flota el elemento a la derecha del contendor
+    none: Elimina el float
+NO EXISTE FLOAT:CENTER!!
+Un elemento flotado hace que el padre deje de contenerlo, hay varias formas de solucionarlo, la más cómoda es overflow:hidden-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <article class="article">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio assumenda ducimus blanditiis quod, nostrum illum quia
+         atque Eos, id omnis ullam incidunt voluptatem, totam voluptas odit minima laborum facilis quibusdam?</p>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio assumenda ducimus blanditiis quod, nostrum illum quia
+         atque Eos, id omnis ullam incidunt voluptatem, totam voluptas odit minima laborum facilis quibusdam?</p>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio assumenda ducimus blanditiis quod, nostrum illum quia
+            atque Eos, id omnis ullam incidunt voluptatem, totam voluptas odit minima laborum facilis quibusdam?</p>
+    </article>
+
+
+    <article class="article-float">
+            <img src="cafe.jpeg" alt="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam vel fugit nihil eos, ea beatae possimus eum, 
+                alias officiis in, magnam soluta! Saepe expedita quos dolor culpa, veniam modi magnam. Lorem ipsum dolor sit amet
+                 consectetur adipisicing elit. Aperiam vel fugit nihil eos, ea beatae possimus eum, alias officiis in, magnam soluta! Saepe expedita quos dolor culpa, veniam modi magnam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam vel fugit nihil eos, ea beatae possimus eum, alias officiis in, magnam soluta! Saepe expedita quos dolor culpa, veniam modi magnam.</p>
+        </article>
+</body>
+</html>

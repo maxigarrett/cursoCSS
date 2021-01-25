@@ -1,0 +1,115 @@
+
+ /* :root-representa la raiz de un documento HTML usando un apseudoclase tenemos mas especificidad(peso de etiqueta) que si */
+ /* usaramos HTML solo se ve cuando usamos variables css
+ /* :root
+ {
+    /* esta clase la usaremos en otro documento llamado variables css 
+ } */
+
+
+
+
+ /* :empty - esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido 
+ por si queremos dejar una etiqueta vacia y queremos darle estilo o algo dinamico con JS si le damos un fondo
+ solo llamando a la clase y otra tiene loa misma clase se le dara estilo de fondo a esas etiquetas con la misma clase
+ pero si solo le queremos dar a la etiqueta vacia se la damos con la psudoclase :empty*/
+.paragraph:empty
+{
+    all: unset;/*con esta propiedad valor reseteamos todos los estilos*/
+    background: lawngreen;
+    padding: .5em;
+    
+}
+
+
+/* :first-child -selecciona al primer hijo (independientemente del tipo de etiqueta) */
+.paragraph:first-child
+{
+    color: aqua;
+}
+
+/*  :last-child -selecciona el ultimo hijo (independientemente del tipo de etiqueta) */
+.paragraph:last-child
+{
+    background-color: blue;
+}
+
+
+/* :nth-child(n) - selecciona al hijo n (independientemente del tipo de etiqueta) 
+odd - Impares
+even - pares
+numeros enteros - 2,3,4,5.... 
+equaciones(1n,3n,4n+1,n+4.....) es un multiplicador va de 0 hasta n*/
+
+/* odd - Impares */
+.paragraph:nth-child(odd)
+{
+    background-color: lightcoral;
+}
+
+/* even - pares */
+.paragraph:nth-child(even)
+{
+    background-color: blue;
+}
+
+/*numeros enteros: si ponemos 2 se aplica al segundo, 3 al tercer,etc */
+.paragraph:nth-child(2)
+{
+    background-color: red;
+}
+/* equaciones(1n,3n,4n+1,n+4.....) es un multiplicador va de 0 hasta n
+es decir si ponemos 2n se multiplicara 2*0,2*1,2*2* entoces le pondra color de fondo al parrafo 0 pero como no existe
+no se aplicara despues al parrafo 2 por el resultado de 2*1 y parrafo 4 , esto se aplicara porque n ira incrementando 
+de 0 hasta el numero de elementos que aya / 
+.paragraph:nth-child(2n)
+{
+    background-color: rgb(0, 255, 55);
+}*/
+
+
+/* equaciones(1n,3n,4n+1,n+4.....) es un multiplicador va de 0 hasta n
+esto es 2*n+1 seria 2*0+1 despues seria 2*1+1 y 2*2+1 por logica se pondra en los numero impares hasta quedarse sin elemntos*/ 
+.paragraph:nth-child(2n+1)
+{
+    background-color: rgb(0, 255, 55);
+}
+
+/* equaciones(1n,3n,4n+1,n+4.....) es un multiplicador va de 0 hasta n
+esto es n+2 seria 0+2,1+2,2+2 se n siempre ira hasta que se quede sin elemntos*/ 
+.paragraph:nth-child(n+2)
+{
+    background-color: rgb(229, 255, 0);
+}
+
+/* :nth-last-child(n) -selecciona al hijo n empezando a contar desde el ultimo (independientemente del tipo de etiqueta) */
+.paragraph:nth-last-child(2)
+{
+    background: red;
+}
+
+/* en caso de que antes de  los parrafos aya dos div entonces el primer parrafo pasaria a ser el 3 hijo y no el primero
+por lo que si ponemos .paragraph:nth-child(1) y le damos un color de fondo no funcionara ya que no hay nincuna etiqueta
+con la clase paragraph y que se el primer hijo asiq podriamos usar las pseudoclases 
+type(funciona igual que los child pero estos les importa las etiquetas a diferencia de child)
+    :first-of-type
+    :last-of-type
+    :nth-of-type() -
+    :nth-last-of-type()
+    :only-of-type */
+
+    .paragraph:nth-of-type(1)/*esto pintara el primer parrafo porque si le importa la etiqueta con la clase paragraph
+                            osea no se fija en los hijo sino en la etiqueta que contenga la clase especificada*/
+    {
+        background-color: blueviolet;
+    }
+
+
+    /* *negation
+    :not() - selecciona el elemento que no cumpla la condicion, se puede poner cualquier selector salvo otro :not
+    con solo la clase paragraph pintara todos ya que todos tienen la misma clase tanto div como los p pero si ponemos
+    en parentesis div pintara todo menos los o el div */
+    .paragraph:not(div)
+    {
+        background-color: chocolate;
+    }

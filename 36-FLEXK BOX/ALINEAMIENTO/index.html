@@ -1,0 +1,101 @@
+<!-- FELXBOX
+    Alineamiento: Essta propiedad para alinear se aplica SIEMPRE al flex-container
+    
+    existen propiedades para el main axis y el cross axis.
+    main axis:
+        justify-content: flex-star(default) | center | space-between | space-around | spcae-evenly |flex-end
+        flex-star: alinea los elementos al principio del main axis.
+        
+        center: centra los elementos a la mitad del main axis.
+        
+        flex-end: alinea los elemntos al final del main axis.
+        
+        space-between: distribuye los items a la mismadistancia y no deja espacio exterior ni el primero ni el ultimo flex-emd
+        
+        space-around:distribuye los items a la misma distancia y deja espacio exterior en el primero y en el ultimo fle-item
+        
+        space-evenly: distribuye los items y los espacios exteriores del primer y ultimo flex-item dejando la misma distancia
+        entre todos
+
+
+    TRUCO PARA MARGIN:
+        si ponemos margin-left:auto en un flex-container lo que hace es absorber ese margen o si ponemos margin-rigth:auto se ubica 
+        a la derecha del todo osea en la direccion que especifiquemos para centrar entonces no sirve los dos ya mecionado por lo
+        que si tenemos un solo elemento dentro de un flex-container con margin:auto se centra bien
+
+    cross axis:
+        aling-item:una sola linea.
+          flex-star| center |flex-end |stretch(default) |baseline
+        aling-content:varias lineas.
+          flex-star| center |flex-end |stretch(default) |baseline
+        
+        aling-self: se aplica al flex-item. sirve para alinear un elemnto en concreto en el cross axis.
+         -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span>EJEMPLO</span>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+        <div class="flex-item">10</div>
+
+    </div>
+
+
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam commodi excepturi unde! Sit porro nihil,
+         nulla error magni corporis eveniet possimus numquam voluptatibus itaque consequuntur. Asperiores illum voluptates
+         voluptatibus.</p>
+         <img src="../ALINEAMIENTO/axis.png" alt="imgs" class="imag">
+    </div>
+
+    <div class="prices">
+        <div class="prices__item">
+            <h2 class="prices__title">Table 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam commodi excepturi unde! Sit porro nihil,
+            nulla error magni corporis eveniet possimus numquam voluptatibus itaque consequuntur. Asperiores illum voluptates
+            voluptatibus
+      
+            </p>
+        </div>
+
+        <div class="prices__item">
+            <h2 class="prices__title">Title 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam commodi excepturi unde! Sit porro nihil,
+            </p>
+        </div>
+
+        <div class="prices__item">
+           <h2 class="prices__title">Title 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam commodi excepturi unde! Sit porro nihil,
+            nulla error magni corporis eveniet possimus numquam voluptatibus itaque consequuntur. Asperiores illum voluptates
+            voluptatibus</p>
+       </div>
+
+       <div class="prices__item">
+            <h2 class="prices__title">Title 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam commodi 
+            
+        
+            </p>
+        </div>
+    </div>
+</body>
+</html>

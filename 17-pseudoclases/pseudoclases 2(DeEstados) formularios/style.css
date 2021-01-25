@@ -1,0 +1,71 @@
+.input,.label
+{
+    display: block;
+}
+
+/* :enable se aplica a todos los campos del formularioque esten activados el enable visible es el estado normal del formulario
+ para que esten desactivados hay que aplicar a algun input del formulario un disiable */
+.input:enabled
+{
+    background-color: red;
+}    
+
+/* :diseable se le aplicara estilo a los que esten desactivados */
+.input:disabled
+{
+    background-color: yellow;
+    box-shadow: 2px 5px 8px black;
+}
+
+/*:checked al cliquear en el cheked agrandara el label que dice chaeked */
+.input:checked + .label
+{
+    font-size: 2em;
+}
+
+
+
+/* :in-range lo que aplica es cuando estamos en el rango que decidimos lo usaremos en un input:number(siempre)
+como en el html ya le dimos un rango si estamos por debajo de eso o por encima no se le aplicara el green y se pondra
+el color por defecto que tenga o le allamos dado anteriormente */
+.input:in-range
+{
+    background: green;
+}
+
+
+/* :out-of-range para cuando se salga de rango en los input:numbre se aplica esta clase yle da estilo que le pongamos nosotros */
+.input:out-of-range
+{
+    background-color: blue;
+}
+
+
+/*  :optional lo que conseguimos es saber si un campo es opcional por defecto son todos optional como diseable
+se le aplicara a todo menos al input que tiene el atributo required cambiara el color rojo y verde que le dimos anteriormente
+por el css en cascada */
+.input:optional
+{
+    background-color: aqua;
+}
+
+
+/*  :required atributo que se le da a un input para decirle que es requerido */
+.input:required
+{
+    background-color: brown;
+}
+
+
+
+/* al ser de tipo numero si escribimos letras se pondra de color rojo y si ponemos numeros se pondra de color verde */
+.input:valid
+{
+    background-color: green;
+}
+
+
+.input:invalid
+{
+    background-color: red;
+}

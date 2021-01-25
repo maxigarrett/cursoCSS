@@ -1,0 +1,27 @@
+.article
+{
+    border: 1px solid black;
+    padding: .5em;
+    height: 100px;
+    overflow: hidden;/*contenido que se va fuera de la caja se oculta mas utilizado*/
+    overflow: auto;/*scroll mas utilizado*/
+    
+}
+
+.article-float
+{
+    
+    /* veremos con este border que al usar float en la imagen esta escapa de su contenedor y el borde del article
+    no contiene a la imagen solo al texto forma de solucionarlo puede ser overfloe:hiden */
+    border: 1px solid black;
+    overflow: hidden;
+    width: 400px;
+}
+
+.article-float img
+{
+    max-width: 50%;
+    /* para ubicar la imagen a la derecha y el texto suba a la izquierda y este texto rodee a la imagen y no existe otra forma
+    de hacerlo */
+    float: right;
+}

@@ -1,0 +1,59 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 100vh;/*para que quede al medio del body*/
+    background-image: radial-gradient(circle, purple,black);
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    color: #eee;
+
+}
+.grid-container
+{
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+
+   /* nosotros le decimos que las dos primeras fila ocupen 100px y la tercera que se crea porque no caben en 5 columnas y 2 filas
+   tendra de espacio lo que ocupe su contenido o un poco mas si tiene un padding. entonces lo que no declaramos en la tercera fila
+   está en el implicit grid(el grid que no declaramos) lo que creamos está dentro de explicit grid */
+   grid-template-rows: repeat(2,100px);
+
+   
+   /* para las columnas que no declaramos o filas estan las siguintes propiedades:
+   grid-auto-row:
+    establece que hacer con las filas no definidas. osea a la tercela fila le dara 200px */
+   grid-auto-rows: 200px;
+
+
+
+   /*   grid-auto-flow:
+        establece la direccion en la cual se va a pintar el implicit grid.
+        admite 3 valores:
+        row(default): se crearán filas adicionales.
+        columns: se creará columnas adicionales.
+        danse: establece que hacer con los huecos que queden. Los huecos que quedan vacios al no entrar una caja.es decir toma
+        la caja que tenga mas cerca y que quepa en el hueco vacio y lo mete ahí o lo rellena  */
+
+   grid-auto-flow: column;
+
+  
+  grid-auto-flow: dense;/*o row dense que es lo mismo llena los huecos vacios*/
+
+  grid-auto-flow: column dense;
+
+}
+
+.grid__item
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: inherit;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}

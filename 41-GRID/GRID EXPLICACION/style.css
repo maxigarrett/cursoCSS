@@ -1,0 +1,36 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 100vh;/*para que quede al medio del body*/
+    background-image: radial-gradient(circle, purple,black);
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #eee;
+
+}
+.grid-container
+{
+    display: grid;
+    /* para establece el numero de columnas que queremos ose alas columnas las damos en medidas y cada medida representa una
+    columna tenemos 4 columnas de 100px cada una y se le puede cambiar los pixeles */
+    grid-template-columns: 100px 100px 100px 100px;
+
+    /* para las filas si le damos mas del contenido ocupará espacio pero no se mostrará */
+    grid-template-rows: 100px 100px 100px;
+
+    
+}
+
+.grid__item
+{
+    border: 1px solid white;
+    color: inherit;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 60px;
+    text-align: center;
+}

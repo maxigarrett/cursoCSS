@@ -1,0 +1,62 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 100vh;/*para que quede al medio del body*/
+    background-image: radial-gradient(circle, purple,black);
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    color: #eee;
+
+}
+.grid-container
+{
+   display: grid;
+
+   /* fr: Equivale a n fracciones del espacio disponible despues de establecer las medidas fijas. la medida fija sería en este caso
+   50px */
+   grid-template-columns: 50px 1fr 1fr;
+
+   /* auto: Equivale al espacio que quede después de repetir todos los elemntos, es el ultimo que se reparte. El tamaño minimo del
+     item será el espacio del contenido + el pading si lo tuviera.
+     osea el tamaño minimo que va a tener un elemento con auto va a ser el que necesita ese item para el contenido(lo uqe ocupa el 
+     contenido) y el padding si lo tuviera para resumir a la columna que le pongamos auto ocupara lo que ocupe su contenido*/
+   grid-template-columns: 100px 100px auto 100px;
+
+
+   /* funcion repeat()
+    con la funcion repeat podemos establecer repeticiones de medidas o patrones.
+    en el caso "simple" recibirá 2 parametros (valores):
+        repeat(nColumnas o nFilas, medidas)
+      el numero de columna que queremos y la meidida */
+   grid-template-columns: repeat(3,150px);
+
+   /* la primera columna será de 100px y las demas seran 5 columnas de 50px */
+   grid-template-columns: 100px repeat(5,150px);
+
+
+     /* la primera columna será de 100px y las demas seran 3 columnas de 50px y la ultima columna de 100px */
+   grid-template-columns: 100px repeat(3,50px) 100px;
+
+
+    /*  si como segundo valor añadimos mas de una medida, construiremos un patron, no hay limite de valores.
+        grid-template-column: repeat(2, 100px,50px...) es lo mismo que
+        grid-template-column: 100px 50px 100px 50px; 
+        osea la primer columna medira 100 la segunda la segunda 50 la tercera 100 la cuarta 50... pero se repetira dos columnas
+        3 veces */
+    grid-template-columns:  repeat(3,50px 100px);
+}
+
+.grid__item
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: inherit;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}

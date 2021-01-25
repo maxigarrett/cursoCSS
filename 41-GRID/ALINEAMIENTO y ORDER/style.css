@@ -1,0 +1,98 @@
+body
+{
+    
+   
+    height: 100vh;/*para que quede al medio del body*/
+    background-image: radial-gradient(circle, purple,black);
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    color: #eee;
+
+}
+.grid-container
+{
+   display: grid;
+   height: 80vh;
+   border:3px solid yellow;
+   grid-template-columns: repeat(3,100px);
+
+  /* ---------------------------ALINEACION RESPECTO A LAS CELDAS------------------------------- */
+   /* justify-items:alinea los elementos horizontales respecto a la celda.
+   admite varios valores:
+    star.
+    end.
+    center.
+    stretch(default). */
+
+   /* justify-items:start ;se posiciona al principio respecto a la celda */
+   /* justify-items:center ;centadro respecto a la celda */
+
+
+   /*  align-items: alinea los elementos verticalmente respecto a la celda mismos valores  */
+   align-items: start;
+
+
+   /*  place-items: engloba a las propiedades justify-items y align-items
+    place-items: align-items / justify-content
+    osea primer valor vertical segundo valor horizontal*/
+    place-items: start  center;
+/* --------------------------- TERMINA ALINEACION RESPECTO A LAS CELDAS------------------------------- */
+
+
+
+/* ---------------------------ALINEACION RESPECTO Al CONTENEDOR------------------------------- */
+
+
+
+/* /* justify-content: alinea los elemntos horizontalmente respecto al contenedor. */
+    justify-content: end;/*izquierda del todo*/
+    justify-content: start;/*derecha del todo*/
+    justify-content: space-evenly;/*deja el mismo espacio en los borde y entre las columnas*/
+    
+ /* align-content:alinea los elemntos verticalmente respecto al contenedor. */ 
+    align-content: end;
+    align-content: space-evenly;
+
+    /*  place-content: align-content/justify-content. primero vertical segunda horizontal */
+    place-content: space-evenly end;
+
+/* ---------------------------TERMINA ALINEACION RESPECTO Al CONTENEDOR------------------------------- */
+
+
+
+
+
+
+}
+
+/* ALINEAR UN ITEM EN CONCRETO
+ tenemos las mismas propiedades con self para los items:
+    justify-self
+    align-self
+    place-self */
+.grid__item:first-child
+{
+    justify-self: end;/*horizontal*/
+    place-self: start center;/*vertical despues horizontal*/
+
+
+    /* order: funciona igual que en flexbox, por defecto todos los items tienen order:0. 
+    al darle 1 se ira al final porque los demas por defecto estan en 0*/
+    order: 1;
+   
+}
+
+
+
+.grid__item
+{
+    border: .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    color: inherit;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}

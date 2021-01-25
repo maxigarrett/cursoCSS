@@ -1,0 +1,102 @@
+body
+{
+    background-image: radial-gradient(circle, rgb(111, 11, 124),black);
+    margin: 0;
+    color: #feee;
+    height: 100vh;
+}
+
+.card
+{
+    background-color: #333;
+    width: 90%;
+    height: 450px;
+    display: flex;
+    margin: 2em auto;
+}
+img
+{
+    max-width: 80%;
+}
+.card__left
+{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    /*para que la imagen se ajuste al contenedor y no se deforme y hay que darle max-width:para ajustar al contendor del todo*/
+    align-items: center;
+    background-color: #222;
+    justify-content: flex-start;
+}
+
+.card__rigth
+{
+    width: 80%;/*a card__left le damos un ancho de 20% y al rigth le damos lo que falta para completar el 100%*/
+    padding: 0 2rem;
+
+}
+.card__title
+{
+    text-transform: uppercase;
+}
+.form
+{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;para acomodar el boton */
+    justify-content: space-between;/*no ará nada porque el fomulario no tiene un alto solo ocupa lo que su cntenido*/
+    /* le damos u  alto para q se aplique el space-evenly*/
+    height: 350px;
+}
+
+.form__field
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* se pongan uno al lado de otro los dos primeros input */
+.form__name
+{
+    display: flex;
+    text-transform: uppercase;
+   font-size: .8rem;
+   justify-content: space-between; /*separamos los dos input de arriba*/
+}
+.form__name input
+{
+    width: 150px;
+}
+
+/* todas etiquetas del form */
+.form__label
+{
+    margin: 6px 0;
+    text-transform: uppercase;
+    
+}
+
+/* camniamos color de fondo de input y tex area */
+.form__input,.form__textarea
+{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: inherit;/*herredamos el color principal del body*/
+}
+.form__textarea
+{
+    /* no se redimencione el text area */
+    resize: none;
+}
+.form__submit
+{
+    background-color: rgba(0, 81, 255, 0.657);
+    border: none;
+    width: 30%;
+    border-radius: 30px;
+    color: inherit;
+    padding: 10px 15px;
+    margin-top: 1em;
+    text-transform: uppercase;
+}

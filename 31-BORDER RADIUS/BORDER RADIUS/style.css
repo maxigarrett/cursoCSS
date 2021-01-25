@@ -1,0 +1,28 @@
+.box
+{
+    width: 250px;
+    height: 250px;
+    background-color: lightcoral;
+    /* esto es lo mas habitual */
+    border-radius: 30px;/*se aplica a todas las esquinas*/
+    border-radius: 30px 50px;/*primer valor arriba izquierda abajo derecha y arriba derecha abajo izquierda*/
+    border-radius: 30px 50px 100px;/*border-radius: top-left  & top-rigth /bottom-left  &  bottom-rigth*/
+    border-radius: 30px 50px 100px 200px;/*border-radius: top-left & top-rigth & bottom-left & bottom-rigth*/
+
+    /* para no usar clip-path hacemos un circulo con border-radius:50% */
+    border-radius: 50%;
+
+    /* para dibujar elipses en las esquinas y redondearlas recibiendo dos valores y agrupar con una barra:
+    border-radius: 10px / 50px; */
+
+    /* borde inferior izquierdo  */
+    border-bottom-left-radius: 10px  60px;
+
+    /* primer valor eje horizontal X y segundo valor eje vertical Y */
+    border-radius: 10px / 50px;
+
+    /* se agrupan de la siguinte forma  10px , 60px  y 50px, 100px */
+    border-radius: 10px  50px / 60px 100px;
+     /* se agrupan de la siguinte forma  10px , 60px  y 50px, 100px  y 30px,90px y 40px,75px*/
+     border-radius: 10px  50px 30px 40px / 60px 100px 90px 75px;
+}

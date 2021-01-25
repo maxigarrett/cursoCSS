@@ -1,0 +1,54 @@
+/* *su sintaxis es :
+        asi la declaramos
+        *pseudoclase
+        {
+            --nombre-variable:valor;
+        }
+        
+        *selector
+        {
+         y cuando queremos utilizarla 
+        propiedad:var(--nombre-variable)
+        }
+         */
+
+
+ /* :root-representa la raiz de un documento HTML usando un apseudoclase tenemos mas especificidad(peso de etiqueta) que si
+ usaramos HTML(pertenece a las pseudoclases estructurales) en esta pseudoclase podemos guardar lo que queramos para utilizarlas
+ en cualquier elemento */
+:root
+{
+    /* si cambiaos los valores automaticamente se cambiaran dode allamos aplicado las variables  */
+    --color:blue;
+    --border: 2px solid red;
+}
+
+.paragraph
+{
+
+    color:var(--color);
+}
+
+/* para ver como funciona la cascada podemos redefinir la variable solo se aplicara al segundo parrafo ya que el otro está
+encerrado en otro article con diferente clase*/
+.article
+{
+    --color:green;
+}
+
+
+
+/* el box es hermano de input check asique si le aplicamos un selector de hermano se pondra de color purpura cada vez
+que seleccionemos el checkBox (el color vale azul ya que está dentro de root) */
+.chek:checked + .box
+{
+    --color:purple;
+}
+
+.box
+{
+    width: 100px;
+    height: 100px;
+    background: var(--color);
+    border: var(--border);
+}

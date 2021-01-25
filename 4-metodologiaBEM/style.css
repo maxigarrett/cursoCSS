@@ -1,0 +1,56 @@
+/*para distingior donde esta los bloques principales le damos color y un alto*/
+.main-title{text-align: center;}
+.header{background-color: lightblue; height: 50px;}
+.main{background-color: lightgreen; height: 600px;}
+.footer{background-color: lightsalmon;height: 200px;}
+
+
+
+.main-menu
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;/*sacrle el estilo en este caso los puntos de cada lista */
+    display: flex;/*abicarlos en linea*/
+    justify-content: space-evenly;/*los separa y los pone al medio*/
+}
+/*estos items li pertenece al bloque de main menu que es un <ul>*/
+.main-menu__item
+{
+    line-height: 3;
+}
+
+/*link dentro de los items pero hace referencia que pertenece directamente al bloque <ul> forma errone de escribirlo
+es: .main-menu__item__link solo hay que poner .main-menu__link diciendo que el link pertenece al bloque pricipal
+llamado main-menu */
+.main-menu__link
+{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: green;
+}
+
+/*cambiar el color de un elemento usamos el modificador*/
+.main-menu__link--active
+{
+    background: red;
+}
+
+
+/*en un formulario seria*/
+.main-form
+{
+
+}
+
+/*modificar lavel*/
+.main-form__label
+{
+
+}
+/*modificamos boton de enviar formulario*/
+.main-form__submit
+{
+
+}

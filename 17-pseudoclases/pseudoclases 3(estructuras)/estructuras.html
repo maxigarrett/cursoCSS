@@ -1,0 +1,64 @@
+<!-- 
+ Structural
+    :root-representa la raiz de un documento HTML usando un apseudoclase tenemos mas especificidad(peso de etiqueta) que si
+     usaramos HTML
+
+    *child
+    :first-child -selecciona al primer hijo (independientemente del tipo de etiqueta)
+
+    :nth-child(n) - selecciona al hijo n (independientemente del tipo de etiqueta)
+
+    :nth-last-child(n) -selecciona al hijo n empezando a contar desde el ultimo (independientemente del tipo de etiqueta)
+
+    :last-child -selecciona el ultimo hijo (independientemente del tipo de etiqueta)
+
+    :only-child  -selecciona al hijo unico(independientemente del tipo de etiqueta) si hay mas de un hijo no anda
+        valores posibles que se le aplica a los nth-child
+            odd - Impares
+            even - pares
+            numeros enteros - 2,3,4,5.... 
+            equaciones(1n,3n,4n+1,n+4.....) es un multiplicador va de 0 hasta n osea hasta q se qde sin elementos
+
+
+
+    *type(funciona igual que los child pero estos les importa las etiquetas a diferencia de child)
+    :first-of-type
+    :last-of-type
+    :nth-of-type() -
+    :nth-last-of-type()
+    :only-of-type
+
+    *negation
+    :not() - selecciona el elemento que no cumpla la condicion, se puede poner cualquier selector salvo otro :not
+
+    :empty - esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudoclases estructurales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="paragraph">div1</div>
+        <div class="paragraph">div2</div>
+        <div class="paragraph">div3</div>
+        <div class="paragraph">div4</div>
+        <p class="paragraph">parrafo 1</p>
+        <p class="paragraph">parrafo 2</p>
+        <p class="paragraph">parrafo 3</p>
+        <p class="paragraph">parrafo 4</p>
+        <p class="paragraph">parrafo 5</p>
+        <p class="paragraph">parrafo 6</p>
+        <p class="paragraph">parrafo 7</p>
+        <p class="paragraph">parrafo 8</p>
+        <!-- <p class="paragraph"></p> -->
+    </div>
+    
+</body>
+</html>

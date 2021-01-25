@@ -1,0 +1,32 @@
+.box
+{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+
+    background-image: linear-gradient(red,blue);/*forma mas sencila de degradado de 0% es rojo puro y arranca de arriba hacia abajo pasando al azul puro(%100)*/
+
+    background-image: linear-gradient(red,blue,yellow);
+
+    /* linear-gradient([direction], color-1, color-2....) la direccin se establece con un angulo o con las palabras claves TO y la direccion */
+    background-image: linear-gradient(to right, red,blue);/*el degradado arranca del rojo hacia azul del lado izquierdo hacia a la derecha(to right)*/
+
+    background-image: linear-gradient(to top right , red,blue); /*arranca de inferior izquierda hacia top right(superior derecha)*/
+
+    background-image: linear-gradient(50deg, red,blue);/*al hacer degradados el 0 está en bot e ira girando en centido de la agujas del reloj*/
+
+    /* paradas de color para que el corte entre uno y otro sea solido (no aya degradado)*/
+    background-image: linear-gradient( red 50%,blue 50% 75%,yellow );/*el rojo va de 0 a 50% rojo, 50 a 75% azul y el resto de amarillo*/
+
+
+
+    /* DEGRADADOS RADIALES */
+    /*  background-image: radial-gradient([shape], red, blue); shape si es un circulo o elipse */
+    background-image: radial-gradient(circle 100px, red 50%,blue 50%);
+
+    background-image: radial-gradient(circle 100px at top, red 50%,blue 50%);/*el circulo dibujado le podemos dar otra posicion con at y la posicion top,rigth*/
+
+
+    /* para q se dibuje la elipse se necesitas dos valores primero X despues Y */
+    background-image: radial-gradient(ellipse 200px 50px at bottom right, transparent 50%, blue 50%);
+}

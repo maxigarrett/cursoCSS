@@ -1,0 +1,41 @@
+<!-- evitar que las imagenes se deformen
+*object-fit: se usa para especificar como se debe cambiar el tamaño de <img> o <video> para que se ajuste a su contenedor
+    fill: valor por defecto.
+    contain: el contenido se ajustará hasta rellenar de forma horizontal o vertical el contenedor sin deformarse(no llena el cont)
+    cover: el contenido se ajustará hasta rellenar de forma horizontal y vertical el contenedor sin deformarse(mas utilizada en una gaaleria rellena todo sin deformar)
+    none: el contenido no se redimenciona y mantiene su tamaño original mostrando solo el trozo de las dimenciones especificadas
+    scale-down: selecciona el menor de la comparacion entre none y container.
+
+*object-position: coloca la imagen cuando esta no se muestra completa en el contenedor primer valor eje X segundo eje Y(center,
+rigth,px,em,etc)
+
+*filter(FILTROS):
+    none
+    blur(px): desenfoca la imagen.
+    brightness(%):najusta el brillo de la imagen siendo 1 el original. de 0 a 1 dan oscuridad y de 1 a nsobreexposicion.
+    contrast(%): ajusta el contenido de la imagen siendo 1 el original. de 0 es negro y de 1 a n dan mas contraste.
+    drop-shadow(h-shadow v-shadow blur spread color): aplica una sombra paralela a la imagen.
+    grayscale(%): convierte la imagen a escala de grises, 0 es el original y 1 sería blanco y negro completamente.
+    hue-rotate(deg): añade matiz de color a la imagen. se da un valor en grados según la rueda cromatica. el valor máximo es 360deg
+    invert(%): invierte el color de la imagen. saca un negativo. 0 es el valor por defect y 1 es totalmente invertida.
+    opacity(%): controla la opacidad de la imagen. 1 es el valor por defecto y 0 es transparente.
+    saturate(%): controla la saturacion de color de la imagen. 1 es el valor por defecto y 0 es totalmente desaturada y por encima 
+1 se sobreesatura
+    sepia(%): applica un tono sepia a la imagen. 0 es el valor por defecto y 1 es totalmente sepia.-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <img src="../object-fit object-position y filter/asset/cafe.jpeg" alt="cafe" class="img-cafe">
+    <img src="../object-fit object-position y filter/asset/cafe.jpeg" alt="cafe-2" class="img-cafe2">
+    
+</body>
+</html>

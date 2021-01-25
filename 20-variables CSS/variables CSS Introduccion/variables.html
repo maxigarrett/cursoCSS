@@ -1,0 +1,53 @@
+<!-- VARIABLES CSS (CUSTOM PROPERTIES)
+    *las variables necesitan estar dentro de un selector 
+    
+    *tienen herencia y cascada esto significa que funciona exactamente igual que una propiedad CSS propiedad que apliquemos
+    al padre se va a heredar a todos los hijos y al tener cascada podemos sobreescribir el valor de esa variable
+
+    *existen variables globales y locales y eso dependera del selector en el que lo declaremos, una variable GLOBAL significa 
+    que se puede acceder a esta desde cualquier elemento del HTML osea si la declaramos en un ROOT sera global y si la declaramos
+    dentro de un elemento solo serà accesible a ese elemento y a sus hijos 
+
+    *:root-representa la raiz de un documento HTML usando un apseudoclase tenemos mas especificidad(peso de etiqueta) que si
+     usaramos HTML(pertenece a las pseudoclases estructurales)
+
+    *las variables CSS no son lo mismo que las variables SCSS
+
+    *su sintaxis es :
+        asi la declaramos
+        *selector
+        {
+            --nombre-variable:valor;
+        }
+        
+        y cuando queremos utilizarla 
+        propiedad:var(--nombre-variable)
+
+
+    esto es soportado por todos los navegadore menos el EXPLORER que està en desuso    
+    -->
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variables CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    
+    <h1 class="title">variables CSS</h1>
+    <article class="main-article">
+        <p class="paragraph">párrafo principal</p>
+    </article>
+
+    <article class="article">
+        <p class="paragraph">Otro párrafo</p>
+    </article>
+
+    <input type="checkbox" name="" id="" class="chek">
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* .d
+{
+    display:flex;
+    flex-direction: row;
+    
+} */
+
+/* ---------------------------------------------------RESPONSIVE----------------------------------------- */
+/* al encerra la imagen en un div y le demos cualquier ancho la imagen se ajustara ya que le decimos que se ajuste al 100% */
+/* .img-container
+{
+    width: 300px;
+}
+.img
+{
+    /* imagen responsive en el archivo base se recomienda poner esta regla 
+    max-width: 100%;
+} */
+/* ----------------------------------------------------------RESPONCIVE------------------------------------------------------------ */
+
+
+/* -----------------------------------------SACANDO COLOR DE FONDO DE LA PARTE DE ABAJO DE LA IMAGEN----------------------------------------------------------------------- */
+
+/* SEGUNDA IMAGEN */
+/* la imagen por defecto son elemento inline, esto causa un espacio por debajo debido a line-height,se puede solucionar de dos 
+formas:
+    dando un line-height:0 al contenedor o 
+    un display:block a la imagen */
+
+    /* img
+    {
+        max-width: 100%;
+        display: block;/*mas recomendable y lo mas habitual ya que se trabajan con flexbox o grid*
+    }
+    .img-container
+    {
+        background: red;
+        line-height: 0;
+    } */
+/*------------------------------------------------------TERMINA SACANDO COLOR DE FONDO QUE SE VE EN LA PARTE DE ABAJO--------------------------------------------------------------  */
+
+
+
+
+/* ----------------------------------------------CENTRADO DE IMAGENES----------------------------------------- */
+/* TERCERA IMAGEN */
+/* 
+ img
+    {
+        max-width: 100%;
+        /* display: block;mas recomendable y lo mas habitual ya que se trabajan con flexbox o grid 
+        /* margin-left: auto;
+        margin-right: auto;  esto por si le damos un display-block pero si es de linea le damos los atributos al contenedor
+    }
+    .img-container
+    {
+        /* atributos al contenedor para centrar imagen por si queremos que sea de linea la imagen y no de bloque 
+        text-align: center;
+        align-items: center;
+        background: rgb(112, 173, 168);
+       
+    } */
+
+/* -------------------------------------------TERMINA CENTRANDO iMAGEN------------------------------------------------------------- */
+
+
+
+/* --------------------------------CENTRAR VERTICALMENTE ----------------------------------------------- */
+/* IMAGEN 3 */
+/*  
+    flexbox(la mejor opcion)
+    el vertical-align: middle a la imagen y al texto*/
+ img
+{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+}
+.img-container
+{
+    width: 100%;
+    background: rgb(112, 173, 168);
+   
+} 
+
+
+/* forma vieja de hacerlo */
+/* .img-container span,.img-container img
+{
+    vertical-align: middle;
+    
+}
+
+.img-container
+{
+    display: table;
+
+}
+.img-container span,.img-container p
+{
+    display: table-cell;
+} */
+
+/* FORMA CORRECTA */
+.img-container
+{
+    display: flex;
+    align-items: center;
+}
+

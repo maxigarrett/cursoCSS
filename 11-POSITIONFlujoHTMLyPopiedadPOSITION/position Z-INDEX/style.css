@@ -1,0 +1,80 @@
+ .contenedor-principal
+ {
+     border: 2px solid black;
+     width: 500px;
+     height: 600px;
+     margin: 1px auto;
+     position: relative;
+ }
+ [class^="box"]
+ {
+     width: 200px;
+     height: 200px;
+ }
+
+ .box1
+ {
+     background-color: aqua;
+
+     /* con absolute lo podemos mover hacia donde nosotros querramos dentro del body o del contenedor principal  que es el div
+     y si el div princi`pal tiene un position relative tomara de referencia los div que se encuntren dentro el div principal
+     y se moveran solo dentro de este div pricipal
+      position: absolute;
+     top: 0;
+     left: 20px; */
+     
+     position: relative;
+     z-index: 30;
+ }
+
+
+
+ .box2
+ {
+     background-color: blue;
+     position: relative;
+     left: 100px;
+     bottom: 50px;
+     z-index:22;
+     line-height: 200px;/* baja el texto del contenedor */
+     text-align: center;
+ }
+ .box3
+ {
+     background-color: tomato;
+     position: relative;
+     left: 200px;
+     bottom: 90px;
+     z-index: 10;
+ }
+ .box4
+ {
+     background-color: blueviolet;
+     position: relative;
+     bottom: 300px;
+     left: 150px;
+     z-index: 15;
+ }
+
+
+ /* para que el hijo se ubique por debajo le tendremos que dar numero negativo asi funcionara pero si el padre tiene un z-index 
+ tambien no funcionara osea que el padre no tiene que tener un z-index */
+ .padre
+ {
+     background-color: blue;
+     width: 200px;
+     height: 200px;
+     position: relative;
+     top: 10px;
+ }
+
+ .hijo
+ {
+     background-color: yellow; 
+    width: 50px;
+    height: 50px;
+    position: relative; 
+    top: -30px;
+    left: 150px;
+    z-index: -1;
+ }

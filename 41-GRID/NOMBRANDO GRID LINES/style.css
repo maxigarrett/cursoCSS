@@ -1,0 +1,93 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 100vh;/*para que quede al medio del body*/
+    background-image: radial-gradient(circle, purple,black);
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #eee;
+
+}
+.grid-container
+{
+    display: grid;
+    background-color: white;
+    padding: 1rem;
+    grid-template-columns:
+     /* damos nombre a cada una de las lineas de columna al lado de su medida de cada celda */
+     [primer-linea-columna]
+     100px 
+     [segunda-linea-columna]
+     100px 
+     [tercer-linea-columna]
+     100px 
+     [cuarta-linea-columna]
+     100px
+     [quinta-linea-columna];
+
+    grid-template-rows:
+    [primer-linea]
+     100px
+     [segunda-linea] 
+     100px 
+     [tercera-linea]
+     100px
+     [cuarta-linea]
+      100px
+     [ultima-linea];
+
+   
+
+    
+
+}
+
+.grid__item
+{
+    display: flex;
+    border: 1px solid black;
+    color: black;
+    padding: 1rem;
+    font-size: 2rem;
+    line-height: 60px;
+    text-align: center;
+}
+/* como le hemos dado nombres tanto a las lineas horizontales(rows) como verticales(column) no usaremos esos numeros
+sino los nombres de cada linea de fila y de columna */
+.grid__item:first-child
+{
+    background-color: pink;
+    grid-column: 2/3;
+    grid-column: segunda-linea-columna/tercer-linea-columna;/*remplazamos los numeros*/
+}
+.grid__item:nth-child(2)
+{
+    grid-column: 1/3;
+    grid-column: primer-linea-columna/tercer-linea-columna ;
+
+    grid-row: 2/4;
+    grid-row: segunda-linea/cuarta-linea;
+    background-color: pink;
+}
+.grid__item:nth-child(3)
+{
+    grid-column: 3/4;
+    grid-column:tercer-linea-columna/cuarta-linea-columna;
+
+    grid-row: span 2;
+    grid-row: primer-linea/ tercera-linea;
+    background-color: orange;
+}
+.grid__item:nth-child(4)
+{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: orange;
+}
+
+
+

@@ -1,0 +1,58 @@
+body
+{
+    height: 100vh;
+    color: #eee;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, purple,black);
+}
+
+.main
+{
+    display: grid;
+    /* con esto ahora tenemos que establecer columnas o filas pero con nombres la primera fila la nombramos header porque queremos
+    nombrarla como el header que vamos a hubicar entonces tenemos una fila de tres columnas porque lo repetimos tres veces al nombre */
+    grid-template-areas:
+    "header header header" 
+    /*queremos que el aside ocupe una columna y el article 2 columnas*/
+    "aside article article"
+    /*ya tenemos nuestra area establecida pero falta establecer o colocar los elementosen su sitio para eso
+    el punto o guion en la ultima columna le decimos que se quede vacio*/
+    "footer footer .";
+
+    /* los primeros 100px se aplican al aside 
+    el primer 100px es a la primer columna las otras 2 que completan las tres columnas estan dentro del primer parametros con num 2  */
+    grid-template-columns: 200px repeat(2, 1fr) ;
+    grid-template-rows: 100px 450px 150px; /*apra agregarle mas filas*/
+   
+}
+
+.header,.footer
+{
+    text-align: center;
+    background-color: peru;
+   padding: 2rem 0;
+}
+
+.header
+{
+    /* para ubicar el header donde queremos vamos a la clase header q es donde estamos y ponemos grid-area y el nombre que le dimos
+    al grid-template-areas: que fue header(nombrado 3 veces para que ocupe 3 columnas)*/
+    grid-area: header ;
+}
+.aside
+{
+    grid-area: aside;
+    background-color: hotpink;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+.article
+{
+    grid-area: article;/*se ubica en la segunda columna y la tercera delante de aside*/
+    background-color: blue;
+}
+.footer
+{
+    grid-area: footer;
+}

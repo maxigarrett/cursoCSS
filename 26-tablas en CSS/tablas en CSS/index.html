@@ -1,0 +1,76 @@
+<!--  table-layout: Definir como se comportan las dimensiones de una tabla y los anchos de las "columnas"
+        automatic: valor por defecto
+        fixed: necesita un ancho declarado, si no se le da un ancho a cada columna se ditribuyen equitativamente
+       
+     caption-side: defina dónde se coloca el subtítulo(caption) de una tabla.
+        top: valor por defecto
+        bottom: se coloca al pie de la tabla
+    
+    border-spacing: Controla el espacio entre las celdas.recibe una medida en cualquier unidad 
+
+    border-collapse: Controla si las celdas se mantienen juntas o separadas.
+        separate: valor por defecto
+        collapse: junta las celdas para no
+    
+    empty_cell: Controla qué hacer con las celdas vacías
+        show: valor por defecto
+        hide: oculta las celdas vacías -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <div class="table-container"><!-- para poder hacerlo responsive-->
+        <table class="table">
+            <caption>Avengers</caption>
+            <colgroup>
+                <col class="col1">
+                <col class="col2">
+            <col class="col3">
+            </colgroup>
+
+            <thead>
+                <tr>
+                 <th class="table__head">UserName</th>
+                 <th class="table__head"> Email</th>
+                 <th class="table__head">Company</th>
+
+             </tr>
+            </thead>
+
+         <tbody>
+                <tr class="table__row">
+                  <td  class="table__data">Tony Stark</td>
+                  <td class="table__data">tonystark@gmail.com</td>
+                   <td class="table__data">Marvel</td>
+             </tr>
+
+             <tr class="table__row">
+                 <td class="table__data">Bruce Banner</td>
+                 <td class="table__data">brucebanner@gmail.com</td>
+                  <td class="table__data">Marvel</td>
+              </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">Peter Parker</td>
+                  <td class="table__data">peterparker@gmail.com</td>
+                  <td class="table__data">Marvel</td>
+             </tr>
+
+              <tr class="table__row">
+                       <td class="table__data">Steve Rogersk</td>
+                     <td class="table__data"></td>
+                        <td class="table__data">Marvel</td>
+             </tr>
+         </tbody>
+
+     </table>
+   </div><!-- para poder hacerlo responsive-->
+</body>
+</html>

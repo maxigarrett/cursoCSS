@@ -1,0 +1,69 @@
+/* table-layout: Definir como se comportan las dimensiones de una tabla y los anchos de las "columnas"
+automatic: valor por defecto
+fixed: necesita un ancho declarado, si no se le da un ancho a cada columna se ditribuyen equitativamente */
+.table
+{
+    table-layout: fixed;
+   width: 100%;/*que ocupe ell 100% del ancho y no se monte si ponemos menos valores*/
+    text-align: center;/*alineamos al centro el contenido*/
+}
+/* ------------------------------------------------------------------------------------- */
+
+
+/* UBICACION DE EL CAPTION */
+/*   caption-side: defina dónde se coloca el subtítulo(caption) de una tabla.
+        top: valor por defecto
+        bottom: se coloca al pie de la tabla */
+    .table
+    {
+        caption-side: bottom;
+    }
+
+    /* ----------------------------------------------------------- */
+
+/* ESPACIOS ENTRE LAS CELDAS y ponemos el borde en todas */
+/*   border-spacing: Controla el espacio entre las celdas.recibe una medida en cualquier unidad  */
+.table,.table__data,.table__head
+{
+    border-spacing: .8px;
+    border: 2px solid red;
+}
+/* .table__data/*borde a las celdas se lo damos todo en un mismo el de arriba
+{
+    border: 1px solid black;
+} */
+
+/*-------------------------------------------------------------------------- */
+
+
+/* CONTROLAR SI LAS CELDAS TIENEN SEPARACION O SE MANTIENEN JUNTAS */
+/*  border-collapse: Controla si las celdas se mantienen juntas o separadas.
+     separate: valor por defecto
+     collapse: junta las celdas para no */
+
+.table
+{
+    border-collapse: collapse;/*lo normal es er las celdas unidas y no separadas y con esto las unimos */
+}
+/* --------------------------------------------------------------------------------------------*/
+
+
+/* CONTROLAR QUE SE HACE CON LAS CELDAS QUE ESTAN VACIAS */
+/* empty_cell: Controla qué hacer con las celdas vacías
+ show: valor por defecto
+ hide: oculta las celdas vacías  */
+
+.table__data
+{
+    background-color: aqua;
+    /*si tenemos border_colapse no se aplica pero si lo sacamos o comentamos la celda vacia desaparece y no aplica el background*/
+    empty-cells: hide;
+}
+/* ----------------------------------------------------------------------- */
+
+
+/* TODA LA TABLA ENCERRADA EN UN DIV PARA HECERLA RESPONSIVE  PARA QUE HAGA SCROLL A LA TABLA Y NO TODA LA PAGINA*/
+.table-container
+{
+   overflow-x: auto;
+}

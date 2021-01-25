@@ -1,0 +1,123 @@
+/* ejemplos en pseudoclases.html
+    pseudoclases dinamicas(las que tienen link etre parentesis es que solo sirven para aplicarse a links):
+        :link(links) link no visitado
+        :visited(links) link no visitado
+        :hover al poner el mause sobre el elemento se activa el estilo
+        :active(links) el momento del click
+        :focus cuando el elemento tiene el foco
+
+  target
+     :target elemento que es objetivo de un marcador o ancla
+
+
+ se utiliza cuando el enlace no a sido visitado */
+.body
+ {
+     margin-top: 100px;
+ }
+ .title
+ {
+     margin: 0px;
+ }
+.link:link
+{
+    /* mostrara el link de color rojo si no se ah visitado */
+    color: red;
+}
+
+/* mostrara el link de color chartresue si se ah visitado queda feo en pag web que cambie de color al hacer pero pude usar*/
+.link2:visited
+{
+    color: chartreuse;
+}
+
+/* se aplica justo cuando hacemos clic antes de soltar */
+.link:active
+{
+    color: cyan;
+    background-color: brown;
+}
+
+/* creamos un link lo nombremos boton y la llamamos con la case buttom y le damos el estilo que esta abajo */
+.buttom
+{
+    display: inline-block;
+    text-decoration: none;
+    background-color: red;
+    padding: .5em;
+    border-radius: 10px;
+    color: white;
+}
+
+/* al cliquear al link se achicara con la propiedad transform */
+.buttom:active
+{
+    transform: scale(.8);
+}
+
+
+/* se activa al pasar el mause. no al hacer clic solo al poner la flecha encima */
+.buttom:hover
+{
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+/* esta se aplica cuando una pseudoclase tiene el foco osea que esta seleccionado y se procdra de color verde al cliquear
+sobre un input para escribir algo y cuando hagamos clic en otro parte de la web volvera a su estado original */
+.input:focus
+{
+    background-color: green;
+}
+
+
+/* el ancla que deriva al texto */
+.texto-menu
+{   
+    display:block;
+    background-color: aqua;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.text 
+{
+    margin-top: 500px;
+    margin-bottom: 500px;
+}
+/* target elemento que es objetivo de un marcador o ancla solo usarlo para hacer referencia entre link y el ancla*/
+.text:target
+{
+    /* al dezplasarce hacia altexto este texto tendra un padding para que no se superponga con el link que hace de ancla */
+    padding-top: 80px;
+}
+
+
+
+
+/*  Lenguaje
+        :lang() elemento que contiene el atributo lang que especifica en que idioma esta escrito es parte del texto */
+
+/* spam */
+.span
+{
+    display: block;
+}
+
+/* como parametro le pasamos el identificador de idiomas tenemos dos span con la misma clase pero se difernecia por su
+lang uno es español(es) y otro ingles(en) */
+.span:lang(en)
+{
+    color: red;
+}
+
+.span:lang(es)
+{
+    color: blue;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--isertar css en la cabecera
+    <style>
+        p
+        {
+            color:blue;
+        }
+    </style>   -->
+</head>
+<body>
+    <!--diferentes formas de aplicar css es estilo en linea y no es recomendado solo si es modificar algo en 
+    particular osea que se tienen q calcular en tiempo real con JS por ejemplo:
+    
+         <h1 style="color:blue> soy un encabezado </h1>"
+        
+        
+    hija de estilos externa y la traemos llamandola con etiqueta link (recomendado)
+        
+        <link rel"stylesheet" href"style.css">(nombre de la hoja de estilo)
+    
+    
+    otra forma de traerlo usar la regla @import url("stile.css"); en css plano no se utilisa
+    se utilisa mas para otra cosa si lo usamos en css plano puede haber fallos-->
+
+
+        <link rel="stylesheet" href="stilo.css">
+
+        <h1>soy un encabezado</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.</p>
+
+
+             <!--selectores de clase se llama desde css con un punto ejemplo (.titulo{codigo})-->
+             <h1 class="titulo">soy un encabezado</h1>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+             dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+             animi perferendis reprehenderit.</p>
+
+
+             <!--los selectores id no se recomienda para dar estilo. este selector solo se puede aplicar a un elemento
+            dentro de todo el documento HTML lo id se utilizan mas para las anclas y en JS para acceder al dom-->
+             <h1 id="titulo">soy un encabezado</h1>
+             <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+                  dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+                  animi perferendis reprehenderit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+                  dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+                  animi perferendis reprehenderit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+                  dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+                  animi perferendis reprehenderit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+                  dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+                  animi perferendis reprehenderit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla nihil alias soluta repudiandae
+                  dolore aperiam deserunt deleniti accusamus, veritatis, adipisci id, saepe mollitia ducimus iure ab 
+                  animi perferendis reprehenderit.</p>
+
+
+
+                  <a class="rojo-verde" href="#">enlace 1 rojo verde</a>
+                  <a class="rojo" href="">enlace 2 rojo</a>
+                  <a class="verde" href="#">enlace tres verde</a>
+                  <a class="verde-rojo" href="">enlace 4 verde rojo</a>
+
+
+                  <h1>Tìtulo</h1>
+                  <h2>Subtìtulo</h2>
+                  <h2>otro subtìtulo</h2>
+                  <h3>otro subtitulo mas</h3>
+                    <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum necessitatibus cumque dolorem harum
+                     ullam itaque, aspernatur nostrum, <span>SOY UN SPAM</span> amet consequatur obcaecati rem incidunt est. Quisquam 
+                     laudantium officiis commodi asperiores id iusto!</p>
+
+                     <span>SOY OTRO SPAM</span>
+                    </div>
+                  
+
+</body>
+</html>

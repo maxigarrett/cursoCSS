@@ -1,0 +1,50 @@
+/*son estilos en bloque ya que ocupan todo el ancho de la pag*/
+h1
+{
+    background: lightblue;/*mostramos el tamaño de la caja pintando su fondo*/
+    height: 150px;
+    width:100px;
+}
+h2
+{
+    background: purple;/*mostramos el tamaño de la caja pintando su fondo*/
+
+    /*aunque achiquemos el tamaño nunca se irà para arriba porq el h1 es elemento de bloque y tiene su espacio
+    reservado pormas q no aya nada a su lado por haber achicado su ancho*/
+    width:50px;
+
+}
+
+/*son estilos en linea ya que ocupa lo que ocupa su contenido y no se puede modificar su ancho ni alto*/
+/*mostramos lo que ocupa los enlaces*/
+a
+{
+    background: lime;
+    /*no se modificara por mas que pongamos lo que querramos sepuede modificar con display*/
+    width:50px;
+    height: 150px;
+
+}
+
+.box-1
+{
+    width: 100px;
+    height: 100px;
+    background: limegreen;
+    padding: 10px;/*separamos el contenido 10 px por todas la direcciones del borde*/
+    border: 2px solid palevioletred;/*marcamos el borde*/
+    margin: 20px; /*separamos 20 px por todos los lados o direcciones de los demas elementos*/
+
+    /*es similar al borde pero la diferencia entre el borde y outlines es que el borde si hace
+     que se separe o ocupe mas la caja  pero outline no... si borramos el margen y borde y aumentamos los pixeles de 
+     outline se sobrepondra sobre otra caja ya que no se cuenta para el tamaño de la caja.. el borde si separaria 
+     una caja de otra porque si cuenta como tamaño de la caja
+     el aoutline se suele utilizar para localizar elementos ya que no empuja ninguna otra caja y lo localisas*/
+    outline: 5px solid blue;
+}
+.box-2
+{
+    width: 100px;
+    height: 100px;
+    background: lightcoral;
+}

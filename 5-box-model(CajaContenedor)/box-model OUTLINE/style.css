@@ -1,0 +1,28 @@
+.img-box
+{
+    
+    margin: 2em auto;/*simplificamos lo de abajo donde estan los margin*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /*margin-top: 2em;*/
+   /* margin-left: auto;  centramos la imagen automaticamente solo se puede con elementos de bloque, no de linea */
+    /*margin-right: auto;  centramos la imagen automaticamente solo se puede con elementos de bloque, no de linea */
+
+}
+
+.img
+{
+   width: 95%;
+    border: 5px solid lightcoral;
+    outline: 5px solid blue;
+    outline-offset: 10px; /*se separa 10px de la caja*/
+    outline-offset: -40px; /*se mete para adentro  -30px de la caja*/
+}
+
+.text
+{
+    position: absolute;
+    color: lightcoral;
+    font-size: 2em;
+}

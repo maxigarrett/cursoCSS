@@ -1,0 +1,43 @@
+/*los linkamos y no descargamos las letras de GOOGLEFONT porque sus servidores son muy seguros e casi imposible que caigan si sacamos
+de otro lugar tendremos que descargar la tipografia
+ en google font podemos linkar las fuentes para las letras. la pagina cuenta con funciones como:
+    *Sort by y lo dejamos por defecto para ver las ultimas fuentes o familias tipografica(porque dentro de de esa fuente hay varias mas del 
+    *mismo tipo) que se agregaron 
+    *lenguajes:para los caracteres japoneses rusos o chinos
+    *categorias: para los tipos de letras como san serif,serif,etc
+    *Number Style: para hacer un filtro de las letras osea si la queremos mas inclinadas ,el grosor de la letras(Thickness),
+    slant(la inclinacion),width(ancho de la fuente o ancho de los caracteres de los textos)
+    
+    
+    para guardar el tipo de letra de gogle fotn le damos al signo + y no mostrara un link para copiar en html y otro para css
+    font-family: 'Mansalva', cursive;(este va en css y lo ponemos en toda la pag osea body o en algun titulo de h1,etc)*/
+    .title
+    {
+        font-family: 'Mansalva', cursive;
+    }
+    .paragraph
+    {
+        font-family: 'Roboto', sans-serif;
+
+    }
+
+
+
+    /* ahora cuando las fuentes que tenemos no estan en GOOGLEFONT sobretodo en encargos de una empresa y que ayan ya diseñado un tipo de letra
+    por lo que no estará en GOOGLEFONT por lo que utilizaremos la regla FONTFACE 
+    
+    PAGINA PARA DESCARGAR FUENTES DE OTRO SITIO QUE NO SEA GOOGLE FONT: http://www.dafont.com/es/  Y  http://www.1001fonts.com/ 
+    
+    recomendado para todas las cosas externas guardarlas en una carpeta llamada assets*/
+    @font-face
+    {
+        src: url(assets/fuenteexternavalentinevibes.ttf);/*todo junto para que no tire error*/
+        
+        font-family:'myFont';/*llamamos a la propiedad font-family: y le damos un nombre propio 'myFont' */
+    }
+    
+    /* se lo agregamos a una etiqueta para poner la fuente */
+    .title
+    {
+        font-family: myFont,serif,Arial, Helvetica, sans-serif;
+    }

@@ -1,0 +1,46 @@
+<!-- RESPONSIVE WEB DESIGN:
+    *no es un estandar,no es CSS, es un conjunto de patrones de diseño(basicamente una metodologia).
+    *el objetivo es que cualquier pagina se vea bien independientemente del dispositivo.
+    *los framework resuelven este problema(boostrap,etc), pero es un error utilizarlos para evitar aprender lo que hay por detras
+    *los conceptos basicos que trajo RESPONSIVE WEB DESIGN son:
+        columnas fluidas: 
+         *para conseguir un sistema de columnas o de cajas fluidas es tan cencillo como explicar los anchos en 
+         porcentajes.
+         *No hay que asignar  todos los anchos en porcentajes, solo se aplica a los elementos que necesiten su tamaño
+
+
+        imagenes flexibles: max-width:100%.
+
+        media querys:
+         *son condicionales para que el navegador sepa como actuar en funcion de la condicion que le digamos.
+         *hay cuatros mediaquery: all: apto para todos los dispositivos
+                                  print destinado a material impreso y visualizacion del modo de vista previa impresion
+                                  screen:destinado principalmente a las pantallas(veremos esta q es para pantallas )
+                                  speech:destinado a sintetizadores de voz
+
+    Sintaxis de Media Query:
+        @meadia"tipo de medio" and |or (condicion)
+
+    lascondiciones mas utilizadas son min-width,max-width y orientatio:
+      
+            le estamos diciendo que seria para un tipo de medio pantalla y con un ancho minimo de 360px
+            *@media screen and (min-width:360px) 
+
+            le estamos diciendo que es para una pantalla y con un ancho maximo de 1024px y con una orientacion en landscape(ancho
+            mas grande que el alto como cuando ponemos el celular en horizontal)
+            *@media screen adn(max-width:1024px) and (orientation:landscape)
+
+            para un tipo de pantalla y con un ancho maximo de 480px o que la orientacion este en portrait(seria la orientacion normal
+            de un telefono,es decir, que el alto es mas grande que el ancho)
+            *@media screen and (max-width:480px) or (orientatio:portrait)
+
+
+    METODOLOGÍAS:
+    mobile-first: consiste en hacer primero el diseño movil e ir subiendo de tamaño(recomendada)
+    desktop-first: consite en hacer primero el diseño de escritorio e ir bajando de tamaño
+    content-first: consiste saber primero todo el contenido de la web y despues se hace el diseño
+       
+    
+    
+    a dia de hoy el numero de retos a crecido notablemente y se hace "impredecible" el uso de javascript
+        -->

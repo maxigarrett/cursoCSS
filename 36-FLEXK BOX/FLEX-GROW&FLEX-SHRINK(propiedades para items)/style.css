@@ -1,0 +1,79 @@
+.flex-container
+{
+    background-color: peru;
+    height: 300px;
+    width: 400px;
+    display: flex;
+}
+.flex-item
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* width: 200px; para el ejemplo de flex-shrink:2; */
+    
+    /* width: 450px; para el ejemplo de de flex-basis */
+    width: 50px;
+    height: 50px;
+    color: aliceblue;
+    background-color: blueviolet;
+}
+
+
+.flex-item:nth-child(2)
+{
+    background-color: lightgreen; 
+    /* flex-grow: Establece qué hacer cuando hay espacio sobrante. Cuantas divisiones coge el elemento. El valor es un entero
+    desde 0 hasta n o auto se expande este contenedor todo lo que falta para cubrir el ancho del contnedro y medira 250px
+    ya que todos son de 50px el contnedor es de 400 entonces crece 250px  para cubrir el ancho restante */
+    /* flex-grow: 1; */
+
+
+    /* flex-shrink:Establece qué hacer cuando no hay espacio suficiente. Cuantas divisiones pierde el elemento. El valor es un
+    entero desde 0 hasta n. Hace lo mismo que flex grow pero al reves. si le damos un espacio a cada caja que suma mas del
+    ancho de la caja a estas se les quitara por igual una parte del ancho para que quepan en la caja osea que tienen por defecto
+    un flex-shrink de 1 todas las cajas */
+    /* flex-shrink: 2; */
+
+
+    /* flex-basis: Establece cuanto tiene que ocupar el item antes de encojer o extenderse. Flex basis prevalece ante width si el
+     main-axis es horizontal o ante height si el main-axis es vertical. El valor es un entero desde 0 hasta n.
+     si le damos a todas las cajs un acho de 450px pero a un sola le decimos que mida 200px con flex-basis esta caja ba hacer la
+     unica que no se modificaráosea reducirá las otras el ancho para que quepan y a esta la dejará en 200px*/
+    flex-basis: 200px;
+    flex-shrink: 0;/*para decirle no te encojas para que ocupe los 200px*/
+
+
+    /* lo mas normal es declaralo de la siguiente forma para que al navegador le cueste menos calcular y no hacerlo por separado 
+       Los valores de flex son:
+        Por defecto es 0 1 auto
+        flex:auto; equivale a 1 1 auto;
+        flex:none; equivale a  0 0 auto;
+        flex: flex-grow(obligatiorio) flex-shrink(opcional) flex-basis(opcional);
+        el valor 0 de flex-grow, 1 de flex-shrink y auto de flex-basis (shorthan)*/
+    flex: 0 1 auto;
+
+    flex: 0 0 200px;/*lo mismo que esto:flex-basis: 200px flex-shrink: 0*/
+
+    flex: 1;/*si utilizamos el shorthen al menos especificar un valor si o si que el primero valor es flex-grow*/
+
+
+
+    /* Order: Establece qué orden ocupará el elemento en el contenedor flex. El valor es el "peso" respecto a los valores que tengan
+    los otros elementos. Por defecto es 0 
+    si establecemos unvalor q sea mayor que el por defecto que es 0 se colocara al final porque pesamas(parecido a z-index)
+    si atro le pusieramos un valor mas grande se estableceria al final y este quedaria anteultimo y si este es mayor quedará por 
+    delante*/
+    order: 4;
+}
+.flex-item:nth-child(3)
+{
+    background-color: cadetblue; 
+    /* no medira el doble sino que le estamos diciendo que aparte de los 50px que ya mide abarque 2 divisiones mas si le ponemos
+    8 entonces calculara del espacio que queda para repartir dale a este 8 divisiones de ese espacio */
+    /* flex-grow: 2; */
+}
+.flex-item:nth-child(4)
+{
+    background-color: brown; 
+}

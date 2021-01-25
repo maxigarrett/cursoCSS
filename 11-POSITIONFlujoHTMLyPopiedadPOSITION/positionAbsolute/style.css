@@ -1,0 +1,85 @@
+.container
+{
+    width: 300px;
+
+    /* lo desplaza automaticamente hacia la derecha del todo si no se pone un raight auto*/
+    margin-left: auto;
+    /* con estos dos se centra */
+    margin-right: auto;
+    height: 300px;
+    border: 3px solid black;
+    position: relative;
+}
+
+[class^="box"]
+{
+    width: 50px;
+    height: 50px;
+}
+
+.box1
+{
+    border: 3px solid lightcoral;
+        /* position: absolute; si le ponemo estoel texto que hay debajo se colocara por debajo en lugar de este box ya que el 
+        navegador interpretara que ahì no hay ninguna caja pero el borde de este box se seguira mostrando lo que pierde serìa 
+        el contenedor invisible que contiene y no se muestra al menos que le demos un color de fondo */
+        position: absolute;
+
+        /* si le ponemos ahora un top contarà desde la parte de arriba de la pagina  y se desplazarà hacia abajo el box1 esto lo harà
+        si le sacamos el position relative que tiene el container poruqe al tener esto la caja cuenta desde el contenedor
+        pero si lo sacamos cuenta desde el viewport osea el body todo lo visible de la pag*/
+        /* top: 30px; */
+
+        /* se desplazarà hacia abajo de la pagina del todo pero con el margin auto que le dimos al container pra que quede pegado
+        a la pagina y sin el margen le damos un left*/
+        /* bottom: 0px; */
+        /* left: 0; */
+
+        /* si ponemos position relative en el div pricipal que encierra todo la caja al desplasarce contara desde este container
+        y no del viewport o de los bordes de la pagina sino que desde el container que es como llamamos al div principal */
+        top:0;
+        left:0;
+
+
+}
+/* ubicamos todas las cajas en las esquinas para eso pondremos position absolute en todas la cajas para que el navegador no tenga
+en cuenta sus contenedore y poder ubicarlas en cualquier parte del div principal y si movemos el div principal estos contenedores se
+moveran con el porque estan ubicadas respecto al el div por el position relative y no al body esto se usa mucho en maquetacion de
+la pagina web */
+.box2
+{
+    position: absolute;
+    border: 3px solid blue;
+    /* se ubica en esquina sup derecha */
+    top: 0;
+    right: 0;
+}
+.box3
+{
+    position: absolute;
+     border: 3px solid green;
+     /* ubicamos la caja en esquina sup derecha */
+      bottom: 0; 
+      left: 0;
+}
+.box4
+{
+    position: absolute;
+    border: 3px solid aqua;
+    bottom: 0;
+    right: 0;
+}
+.box5
+{
+    position: absolute;
+    border: 3px solid orange;
+    /* solo poner todo a 0 no funciona porque el navegador no puede poner todos los lados a 0 pero si despues le damos una margin
+    automatico lo ubicara al centro respecto al div principal por el position relative que tiene este div principal
+    para que lo ubique en el centro si o si hay que poner todo a 0 si cambiamos un valor el margin auto; no funcionara 
+    hay otras formas mas simples de acerlo pero puede servir en algun caso */
+    bottom: 0; 
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+}

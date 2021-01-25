@@ -1,0 +1,64 @@
+<!-- 
+Alineamiento:
+    justify-items:alinea los elementos horizontales respecto a la celda.
+
+    align-items: alinea los elementos verticalmente respecto a la celda
+
+  admite varios valores:
+    star.
+    end.
+    center.
+    stretch(default).
+
+
+    place-items: engloba a las propiedades justify-items y align-items
+    place-items: align-items / justify-content
+
+    justify-content: alinea los elemntos horizontalmente respecto al contenedor.
+
+    align-content:alinea los elemntos verticalmente respecto al contenedor.
+
+    Admite valores:
+        star
+        end
+        center
+        stretch(default)
+        space-araund
+        space-between
+        space-evenly
+
+    place-content: align-content/justify-content.
+
+
+    tenemos las mismas propiedades con self para los items:
+        justify-self
+        align-self
+        place-self
+
+    order: funciona igual que en flexbox, por defecto todos los items tienen order:0.
+    
+      -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid__item">A</div>
+        <div class="grid__item">B</div>
+        <div class="grid__item">C</div>
+        <div class="grid__item">D</div>
+        <div class="grid__item">E</div>
+        <div class="grid__item">F</div>
+        <div class="grid__item">G</div>
+        <div class="grid__item">H</div>
+        
+    </div>
+</body>
+</html>

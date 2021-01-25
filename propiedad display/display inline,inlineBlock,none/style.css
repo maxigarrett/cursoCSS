@@ -1,0 +1,24 @@
+.inline
+{
+    background-color: green;
+
+    /* se le puede dar pading pero no correra lo que esta por debajo si tiene backgaund como ahora solo tapar lo que hay debaj
+    no lo desplazara osea que no afecta el flujo vertical solo de forma horizontal right left */
+    /* padding-bottom: 5em; */
+
+
+    /* al poner inline-block siguen estando en linea pero pueden haceptar margin y padin desplazando todo las demas cajas
+    como los elementos en bloque */
+    display: inline-block;
+    padding-bottom: 3em;
+
+    /* solo utilizarlo para ocultar algo dinamicamente osea cliquear un boton para ocultar algo ya que ocultar las cosas
+    siguen cargandose en la pagina y gastando recursos tambien al desaparecer ya el naveador no respeta su espacio en el flujo
+    porque lo toma que no hay nada
+     display: none; */
+}
+.block
+{
+    
+    background-color: yellow;
+}

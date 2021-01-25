@@ -1,0 +1,39 @@
+<!--position es la propiedad que nos permite modificar el flujo del html. El flujo de HTML no es lo mismo que el
+flujo de programaciòn, el flujo de html es el orden en que parace los elementos ej: si nosotros ponemos un h1
+y abajo un p ese es el flujo de html primero se dibujo el h1 y despues el p 
+
+los valores de POSITION SON:
+    *static: que es el valor por defecto si no se pone nada no se considera que este posicionado y se consigue con
+    los otros 4 atributos que son:
+
+    *relative
+    *absolute
+    * fixed
+    *sticky
+
+cuando un elemento se posiciona aparecen 5 propiedades nuevas que podemos modificar y admiten valores negativos
+    *top:podemos mover el elemento en relacion a la parte superior.
+    *right: podemos mover el elemento en relacion a la parte derecha.
+    *bottom: podemos mover el elemento en relacion a la parte inferior.
+    *left: podemos mover el elemento en relacion a la parte izquierda.
+    *z-index:podemos mover el elemento en el eje Z. Mover un elemento en el eje Z implica que si dos elementos
+se solapan osea uno de encima de otro con esta propiedad podemos decidir cual aparece por encima de cual-->
+
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <h1 class="title">Atributo position</h1>
+    <p class="parrafo-1">Este es el primer parrafo</p>
+    <p class="parrafo-2">Este es el segundo parrafo</p>
+</body>
+</html>
+
+<!-- esto seria como se comporta las cajas por separado -->

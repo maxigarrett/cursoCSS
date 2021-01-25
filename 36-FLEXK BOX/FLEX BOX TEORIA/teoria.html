@@ -1,0 +1,40 @@
+<!-- *FLEX BOX:(caja flexible)es un modelo de layout que permite que las cajas sean flexibles, es un valor de la propiedad display 
+*Existe display: flex y display:inline-flex para que el contenedor que vamos a declara como caja flexible sea bloque o linea 
+*respecto a los elementos que lo rodean.
+
+*se necesita un contenedor(flex-container) y al menos un hijo (flex-item)
+*las cajas flexibles son los items,el contenedor es el contexto al que pertenecen los items ,es decir, que al contenedor que le 
+demos un display:flex no lo convierte en flexible sino las cajas que tiene dentro se hacen fexibles y si ponemos dentro otras cajas
+dentro de las cajas flexibles entonces ahi tambien hay que ponerles display:flex. eje:
+<div flex>
+    <div flex> en el caso de que no tenga nada adentro queda asi. si ponemos otra caja dentro le daremos flex a esta tambien
+        <div>
+        </div>
+    </div>
+</div>
+
+after y before de un elemnto que tenga display:flex tambien se consideran flex-items(se refiere a los hijos directo)
+el texto tambien se considera un hijo del contenedor aunque no sea una caja sino un texto pero tambien podemos controlarlo de esa 
+forma
+
+*Cuando escribimos display:flex o inline-flex hay cosas que pasan internamente:
+existen dos ejes para colocar y alinear elemntos.
+  por defecto el eje va a ser horizontal y de izquierda a derecha y el eje secundario es vertical de arriba abajo. Se pueden 
+  intercambiar los ejes, es decir que el eje principal se vertical y el secundario horizontal. y la direccion de los eje
+  no siempre tienen que ir de izquierda a derecha
+
+estos ejes reciben un nombre: el eje principal se denomina main axis(por defecto horizontal) y el eje secundario cross axis(por 
+defecto vertical). aparte se genera un principio y un fin que en el eje pricipal se denomina main star y main end y eje secundario
+cross star y cross end
+                  |cross star 
+                  |
+                  |
+  main star       |             main end
+      ---------------------------(main axis)            
+                  |
+                  |
+                  |
+                  |cross end
+                  (cross axis)
+
+                -->

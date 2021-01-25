@@ -1,0 +1,121 @@
+.flex-container
+{
+    background-color: #fca170;
+    padding: .5em;/*ese 0 es para que el padding de el ejeX tenga 0*/
+    height: 400px;
+    display: flex;
+
+    /* JUSTYFY-CONTENT: SOLO ES PARA ALINEAR EN EL MAIN AXIS */
+    /* center: centra los elementos a la mitad del main axis.deja a la derecha y ala izquierda el mismo espacio */
+   justify-content: center;
+
+   /* flex-end: alinea los elemntos al final del main axis. */
+   justify-content: flex-end;
+
+   /* space-between: distribuye los items a la misma distancia y no deja espacio exterior ni el primero ni el ultimo flex-emd */
+   justify-content: space-between;
+
+   /* space-around:distribuye los items a la misma distancia y deja espacio exterior en el primero y en el ultimo fle-item */
+   justify-content: space-around;
+
+   /*space-evenly: distribuye los items y los espacios exteriores del primer y ultimo flex-item dejando la misma distancia
+    entre todos */
+   justify-content: space-evenly;
+
+
+   /*  cross axis:
+    aling-item:una solo una linea. */
+    /* flex-star se coloca arriba del todo pude parecer que sea valor por defecto porque no hace nada pero no es así */
+   align-items: flex-start;
+
+
+   align-items: center;
+
+   /* mandamos el contenido abajo del tododel contenedor o caja */
+   align-items: flex-end;
+
+   /* valor por defecto lo que hace es que si sacamos el alto a los flex-items este extendera los flex-items a todo el largo del 
+   contenedor principal osea ocupa todo lo que puede del alto */
+   align-items: stretch;
+
+   flex-wrap: wrap;
+   /* aling-content: varias lineas */
+   /* al poner wrap para que pasen hacia abajo va a dejar mucho espacio porque por defecto tenenmos aling-item:stretch(suponiendo
+   que no tengamos nada escrito arrriba mas que el disply fles y el wrap) lo que hace en este caso stretch es dejar el mismo 
+   hueco entre la primera fila y la segunda  y la segunda con la caja para corregirlo aling-items que es para una sola linea
+   no nos sirve por lo que usaremos aling-conten y flex-start para colocar todo arriba*/
+   align-content: flex-start;
+}
+
+.flex-item
+{
+    width: 30px;
+    height: 30px;
+    background-color: blueviolet;
+    text-align: center;
+    line-height: 30px;
+    margin: .5em;
+    color: aliceblue;
+}
+
+
+
+/* -----------------------------EMPIEZA IMAGEN---------------------------------------------------------------------------- */
+/* al poner display flex a una imagen dentro de un div lo que pasa es que se deforman */
+.box
+{
+    border: 1px solid black;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;/*para que la imagen no se deforme*/
+}
+.imag
+{
+    
+    max-width: 50%;
+    max-height: 100%;
+}
+/* -----------------------------TERMINA IMAGEN---------------------------------------------------------------------------- */
+
+
+
+.prices
+{
+    display: flex;
+    /* cuando tenemos una tabla de precios y con display:flex se ajusta a s u contenidos pero no todo el contenido de cada caja es
+    igual y para ponerlas igual pondremos osea el titulo de cada div se pondra a la misma altura
+    baseline establece una linea para que el texto empiece desde una misma linea o altura por eso la propia caja se mueve para
+    alinearse */
+    align-items: baseline;
+
+    height: 600px;
+    align-items: flex-start;/*lo ponemos arriba sobreescrivimos baseline*/
+}
+.prices__item
+{
+    width: 25%;
+    height: 300px;
+}
+.prices__item:first-child
+{
+    background-color: peru;
+}
+.prices__item:nth-child(2)
+{
+    background-color: green;
+    line-height: 20px;
+    /*  aling-self: se aplica al flex-item. sirve para alinear un elemnto en concreto en el cross axis. */
+    align-self: center;
+
+}
+.prices__item:nth-child(3)
+{
+    background-color: indianred;
+    line-height: 15px;
+}
+.prices__item:nth-child(4)
+{
+    background-color: lightgreen;
+    line-height: 50px;
+}

@@ -1,0 +1,52 @@
+<!-- 
+  Explicit grid:
+        es el grid que declaramos, tanto con grid-template-columns como con grid-template-rows.
+
+  Implicit grid:
+        es el grid que no declaramos, los items que quedan fuera del explicit grid
+
+  grid-auto-columns:
+        establece que hacer con las columns no definidas
+
+  grid-auto-row:
+        establece que hacer con las filas no definidas.
+        
+  grid-auto-flow:
+        establece la direccion en la cual se va a pintar el implicit grid.
+        admite 3 valores:
+        row(default): se crearán filas adicionales.
+        columns: se creará columnas adicionales.
+        danse: establece que hacer con los huecos que queden.  
+      
+    
+    la unica diferencia entre TEMPLATE y AUTO osea grid-templete-column o row(template es lo declarado) y grid-auto-columns o rows
+    (auto se aplica a lo que no definimos)-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid__item">A</div>
+        <div class="grid__item">B</div>
+        <div class="grid__item">C</div>
+        <div class="grid__item">D</div>
+        <div class="grid__item">E</div>
+        <div class="grid__item">F</div>
+        <div class="grid__item">G</div>
+        <div class="grid__item">H</div>
+        <div class="grid__item">I</div>
+        <div class="grid__item">J</div>
+        <div class="grid__item">K</div>
+        <div class="grid__item">L</div>
+        <div class="grid__item">M</div>
+        <div class="grid__item">N</div>
+    </div>
+</body>
+</html>

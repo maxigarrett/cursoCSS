@@ -1,0 +1,75 @@
+<!--una METODOLOGIA en CSS son una serie de consejos para estructurar nuestras clases de una forma sencilla, 
+escalable y reutilizable.
+ESCALABLE: significa que si nuestro archivo aumenta esto pueda seguir siendo sostenible, es decir, si introducimos
+un elemento nuevo  que no se desmaquete todo y tengamos que reestructurar todo el CSS. Solo añadimoos stilo a ese 
+nuevo elemento y listo.
+
+BEM: es una metodologia mas utilizadas en el mundo. Su nombre viene de las siglas Block,Element,Modifier. esto 
+significa que estructuramos el contenido de tres formas distintas:
+*Block (bloque): es cualquier elemento autònomo y aislado de nuestro documento. Un menu, una galerìa,un formulario,etc.
+*Element (elementos): los elementos son, cada uno de los elementos del bloque. en un menu por ejemplo, cada link o
+elemento de la lista seria un elemento. en una galeria(bloque) cada uno de los elementos de esa galeria seran las fotos, en
+un formulario(bloque) seran campos de texto(elemento).
+*Modifier(modificador):cuendo un bloque se repite en otro lugar de nuestra web hay veces que requiren una pequeña
+modificacion por ejemplo el color de texto,el tamaño de la fuente,etc. En el caso de un menu principal que suele
+estar arriba pero existe casos en el que en el footer tambien tenemos ese menu repetido y en lugar de que el color
+de fuente sea blanco como en el menu principal por ej lo queremos rojo entonces es el mismo menu, pero con una
+pequeña modificacion o en una galeria queremos destacar una foto entoces esa foto va a tener exactamente los mismos 
+estilos que todo pero con alguna pequeña modificacion como algun borde o iconopara destacar esa foto entonces eso
+es lo q se denomina un modificador 
+
+FORMA DE ESCRIBIR CON BEM:los BLOQUES como nav,form,etc se suelen denomina con una sola palabra o con dos palabras
+separadas con unguion si puede existir conflicto de estilos por ejemplo en un menu es posible que haya màs de un 
+menù en la pagina pero solo tenemos un menu principal entonces en ese caso podemos poner:
+.menu O .main-menu
+EN UNA GALERIA: .gallery O  .main-gallery (para distinguir BEM aconceja escribirlos asi)
+
+los ELEMENTOS del bloque se nombrab con el nombre del bloque (.main-menu/main-gallery) al que pertenecen y su nombre
+con dos guiones bajo__:
+.main-menu__item(para cada elemento del menu <li>)
+.main-menu__link (para cada link si hay lik en el menu)
+.main-gallery__item/.main-gallery__img
+
+los MODIFICADORES se nombran con el bloque al q pertenecen y su modificador con dos guiones medio --
+.menu__item--active(active para indicarle que tenemos activado ese elemento del menu por ejemplo cambiando el fondo)
+.gallery_item..special-->
+
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>utilizando BEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 class="main-title">Metodologia BEM</h1>
+
+    <header class="header">
+
+        <nav>
+            <ul class="main-menu">
+
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Item 1</a></li>
+                <li class="main-menu__item"><a class="main-menu__link main-menu__link--active" href="#">Item 2</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Item 3</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Item 4</a></li>
+
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <main class="main">
+
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>

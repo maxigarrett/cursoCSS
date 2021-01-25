@@ -1,0 +1,39 @@
+.img-cafe
+{
+    width: 250px;
+    height: 450px;
+    background-color: red;
+   
+    /* object-fit: none; */
+    /* object-fit: scale-down;/*se aplica a el menor de la imagen entre none y contain es este caso es contain o  */
+                            /* al que haga la img mas pequeña*/ 
+ object-fit: cover;
+object-position:left;/*para poder apreciar lo que hace y ver como se mueve la foto hay que trabajar con  object-fit:cover en este caso*/
+transition: object-position 3s;/*transition es para animar y le decimos que lo que vamos a nimar es object-position y q dure 3s*/
+}
+
+.img-cafe:hover
+{
+    object-position: right;
+}
+
+
+/* FILTROS */
+.img-cafe2
+{
+    max-width: 100%;
+    /* filter: blur(10px);  hace que desenfoque */
+    filter: brightness(0.5);
+    filter: contrast(3);
+    filter: drop-shadow(10px -10px 50px  black);/*h-shadow(vertical) v-shadow(horizontal) blur(desenfoque) spread(extencion) color*/
+    filter: grayscale(.5);
+    filter: hue-rotate(50deg);
+    filter: invert(1);
+    filter: opacity(.1);
+    filter: saturate(0);
+    filter: sepia(1);
+}
+.img-cafe2:hover
+{
+     filter: none;/*al pasar el mause se quita el filtro y queda enfocada la foto */
+}

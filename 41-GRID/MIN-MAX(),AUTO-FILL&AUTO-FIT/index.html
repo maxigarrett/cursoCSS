@@ -1,0 +1,33 @@
+<!-- 
+minmax():
+      recibe dos parametros para establecer el minimo y el maximo que pueden tener los items.
+      grid-template-columns:repeat(2,minmax(100px, 1fr))
+
+      min-content: minimo necesario en funcion del contenido.
+      max-content: maximo necesario en funcion del contenido.
+
+      auto-fill:crea tantos grid-items vacios como quepan en el viewport respetando las medidas.
+      auto-fit: elimina los grid-items vacios que no se esten ocupando.
+      -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid__item">A</div>
+        <div class="grid__item">B</div>
+        <div class="grid__item">C</div>
+        <div class="grid__item">D</div>
+        <!-- <div class="grid__item">E</div>
+        <div class="grid__item">F</div> -->
+        
+    </div>
+</body>
+</html>

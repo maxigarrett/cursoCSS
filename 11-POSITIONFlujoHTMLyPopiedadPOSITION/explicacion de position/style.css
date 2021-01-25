@@ -1,0 +1,18 @@
+/* el flujo de html seria primero el titulo y despues las etiquetas p */
+.title
+{
+    text-align: center;
+    font-size: 3em;    
+}
+
+
+[class*="parrafo"]
+{
+    font-size: 2em;
+}
+
+.parrafo-1
+{
+     visibility: hidden; /*ocultamos el parrafo pero sigue resrvado para ese parrefo el espacio */
+    /* display: none; desaparece y el espacio asignado al parrafo no se concerva */
+}

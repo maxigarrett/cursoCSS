@@ -1,0 +1,37 @@
+<!--* Z-INDEX. Esta propiedad nos permite modificar el orden de las capas en el eje z(profundidad) cual se coloca por encima de cual
+    * admite valores negativos y positivos
+    *es recomendable utilizar valores no consecutivos sino que vaya de 5 en 5 de 10 en 10 ,50 en 50 ,etc por si querer meter una
+    caja entre mdeiode otras dos si tenemos una caja con valor 1 y otra supepuesta con valor 2 la tercera no cabrà entre ellas
+    ya que para ubicarlas tendriamos que poner z-index:1,5 pero no admite valores decimales por eso se trabaja con numeros mas
+    grandes y no consecutivos
+    
+    *si el padre tiene un zindex declarado no podremos poner a un hijo por debajo. recordar que se posicionan por defecto mediante
+    vayamos crenadolas a las cajas si se superponen arriba ira el ultimo creado entre hermanos se puden superponer como uno quire
+    pero entre padre e hijo se utiliza numeros negativos en el hijo lo veremos en el style-->
+
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Z-index</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="contenedor-principal">
+    <div class="box1">MENÙ 1</div>
+    <div class="box2"> MENÙ 2</div>
+    <div class="box3">MENÙ 3</div>
+    <div class="box4">MENÙ 4</div>
+</div>   
+
+
+<!-- posicionar el hijo debajo del padre con z-index ya que dandole un numero mayor al padre y meno al hijo con z-index no funcionara
+ -->
+ <div class="padre">
+     <div class="hijo"></div>
+ </div>
+</body>
+</html>

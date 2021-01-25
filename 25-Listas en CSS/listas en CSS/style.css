@@ -1,0 +1,83 @@
+/* list-style-type: establece el estilo de viñeta
+    disc: por defecto
+    circle :circulo si relleno
+    square: cadrado
+    decimal: se enumeran
+    decimal-leading-zero::los enumera pero con un 0 por delante
+    lower-roman: lowe significa minusculas- numeros romanos minusculas
+    upper-roman: upper significa mayusculas
+    lower-greek
+    lower-latin
+    upper-latin
+    armenian
+    gregorian
+    lower-alpha
+    upper-alpha */
+
+.list
+{
+    list-style-type: circle;
+}
+/* ------------------------------TERMINA ESTILO DE VISZÑNETA------------------------------- */
+
+
+/* ------------------------------EMPIEZA PONERLE IMAGENES A LOS ITEM------------------------------- */
+
+/* list-style-image: pone una imagen en lugar de la viñeta, no se suele utilzar porque hay formas muchas mas eficientes de hacerlo
+    url(imagen) */
+.list
+{
+    /* el problema de esto es que la imagen tiene un tamañ definido muy grande por eso es poco eficiente unas de las formas eficientes es 
+    usando un pseudoelemnto visor*/
+    /* list-style-image: url(check.png); no sirve */
+
+
+    list-style-type: none;
+}
+/* de esta forma lo podemos hacer lo de las imagenes de las listas */
+/* .list__item::before
+{ 
+    content: '';/*para poder dibujar
+    display: inline-block;/*en linea de bloque
+    width: 1em;
+    height: 1em;
+    background-image: url(check.png);
+    background-position: center; /*lo centramos
+    background-size: contain;/*se ajusta al contenedor la imagen
+    background-repeat: no-repeat;
+    padding-right: 1em;
+}*/
+
+/* OTRA FORMA DE ÔNER IMAGEN EN LA LISTA (quedan mejor centrado)*/
+.list__item
+{
+    
+    background-image: url(check.png);
+    background-position: 0 0; /*lo centramos*/
+    background-size: contain;/*se ajusta al contenedor la imagen*/
+    background-repeat: no-repeat;
+    padding-left: 2em;
+
+
+}
+/* ------------------------------TERMINA DE PONER IMAGENES A LOS ITEMS------------------------------- */
+
+
+
+
+/* ------------------------------EMPIEZA A PONER POSICION A LAS VIZÑETAS------------------------------- */
+/* list-style-position: hace que las viñetas se coloquen por dentro o por fuera del elemnto
+    outside / inside */
+/* .list
+{
+    list-style-position: outside;
+}
+.list__item
+{
+    background: red; con este bacgraund podemos ver como se pone por dentro o por fuera las vizñetas(sacr las imagenes y poner vizñetas 
+                    por defecto
+} */
+
+
+
+/* ------------------------------TERMINA EMPIEZA A PONER POSICION A LAS VIZÑETAS------------------------------- */

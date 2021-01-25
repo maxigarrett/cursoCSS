@@ -1,0 +1,127 @@
+/*selectores de etiqueta son para dar estilo generales osea se aplica a todos los p que haya en codigo html se 
+utiliza para cuando receteamos estilo por defecto de la pagina*/
+p 
+{
+    color: blue;
+}
+
+/*selectores de clase referencia a titulo de h1*/
+.titulo
+{
+    color: green;
+}
+.text/*referencia al segunda etiqueta p*/
+{
+    color: blueviolet;
+}
+
+/*selectores de ID no se recomienda en css solo para llamar de js y para anclas*/
+#titulo
+{
+    color: aqua;
+}
+#text
+{
+    color: brown;
+}
+
+/*selectores universales es recoemndable solo utilizarlos para resetear el navegador y con el hasterizco hace 
+referencia a todo el navegador*/
+*
+{
+
+}
+
+/*selectores de atributo seleccionas a traves del atributo el atributo lo ponemos entre corchetes[]
+todos los que tengan atributo href se pondran grises*/
+[href]
+{
+    color: blue;
+}
+/*los que tienen ese atributo con el valor numeral se le aplicara el css que pongamos*/
+[href="#"]
+{
+    color: red;
+}
+
+/* ~ hace referencia a los que tienen por class el valor verde y aplica el css al menos una vez a al que tenga ese 
+valor es decir muchas palabras pero se encuentra la palabra verde entonces aplicara color en este caso a los
+que contengan este valor*/
+[class~="verde"]
+{
+    color: black;
+}
+
+/*el | selecciona los elemntos que tienen ese atributo y exactamente ese valor o empieza por el valor seguido
+de un guion  ejemplo verde-rojo */
+[class|="verde"]
+{
+    color: rgb(62, 190, 50);
+}
+
+/*^ se le aplica a los que solo tengan el nombre como valor rojo o varias palabras pero empiecen por el valor rojo*/
+[class^="rojo"]
+{
+    color: rgb(192, 36, 145);
+}
+
+/*para los que terminan con el valor rojo o solo valor rojo*/
+[class$="rojo"]
+{
+    color: rgb(210, 233, 8);
+}
+
+/*contenga ese valor independientemente en el orden q estè*/
+[class*="verde"]
+{
+    color: rgb(14, 104, 139);
+}
+
+/*selectores combinadores*/
+    /*selector de hermano adyacente osea selecciona a un hermano que este justo debajo osea pondra de color rojo
+    al h2 que esta debajo de h1*/
+    h1 + h2
+    {
+        color: red;
+    }
+
+    /*se aplica al que esta debajo de h2 que es otro h2 seria el hermano que esta debajo solo se aplica al que
+    esta debajo si hay otro h2 no se aplicara*/
+    h2 + h2
+    {
+        color: blue;
+    }
+
+
+
+    /*selector de hermano general. este busca hermanos independientemente del orden que compartan un mismo padre
+    porque aunque no este justo debajo comparten el mismo padre que es el body se aplicaria a todos los h3 que
+    se encuentra dentro de los hermanos que esten debajo de h1*/
+    h1~h3
+    {
+        color: green;
+    }
+
+    /*selectores descendentes en este caso aplicaria estilo a todos los spam que sean hijos de un p
+    osea busca una estiqueta dentro de otra etiqueta*/
+
+   /* p span
+    {
+        color: red;
+    }*/
+
+
+
+    /*aplicara a el spam hijo de div si hay otro spam dentro de un p no lo aplicara poruqe ese spam seria hijo
+    de p*/
+    div span
+    {
+        color: blue;
+    }
+
+    /*selector de hijo directo osea busca la seleccion directamente diciendo que p es mayor que spam por lo que el
+    navegador comprende que si p es mayor entonces es el padre y si spam es menor que p entonces es el hijo*/
+    p > span
+    {
+        color: red;
+    }

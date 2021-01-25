@@ -1,0 +1,29 @@
+ /* la sombra no ocupa lugar por mas que la hagamos muy ancha tapara lo de abajo pero no desplazarra el contenido */
+.box
+{
+    width: 250px;
+    height: 250px;
+    border: 3px solid black;
+    background-color: #aaa;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* box-shdow: h-offset(desplazamiento) v-offset(desplazamiento) blur(difumonar) spread(desplazamiento de la sombra)
+     color inset|outset(valores de la sombra) */
+    box-shadow: 10px 10px 9px 5px;/*si no le damos color toma el color del texto con valores negativos cambia posicion de sombra*/
+
+    /* si solo tenemos un borde si le cambiamos los valores a negativos cambiara la posicion de la sombra */
+    box-shadow: 10px 10px 9px 70px inset; /*con inset la sombra se dibuja por dentro de la caja y se ubica parte izquierda y arriba*/
+
+    /* el que se escribe primero es el que se queda por ensima si le damos los mismo px de desplazamiento solo se verá el azul
+    estos valores de 000 que equivala a ejeX e Y el tercer 0 es de difuminar. solo le damos desplazamiento y color */
+   box-shadow: 0 0 0 3px blue, 0 0 0 5px red, 0 0 0 7px blueviolet;
+}
+
+.title
+{
+    text-align: center;
+    /* con text-shadow funciona de la misma manera que box-shadow pero no tenemos lps valores de extencion de sombra ni los valores
+    de auset e unset */
+    text-shadow: 5px 3px 2px black;
+}

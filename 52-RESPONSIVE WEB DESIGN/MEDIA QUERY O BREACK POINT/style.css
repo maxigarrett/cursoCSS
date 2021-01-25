@@ -1,0 +1,52 @@
+    .menu
+{
+    /* reseteo de listas */
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    /* los estilos se heredan lo que no escribamos en la media query herederan de lo que pongamos por defecto al principio */
+}
+/* POR DEFECTO DEJARIAMOS EL MOBIL Y VAMOS SUBIENDO */
+body
+{
+    background-color: royalblue;
+}
+
+/* @media y el medio que lo vamos a visualizar osea screen(pantalla) and  y la medida o brack point que queremos establecer
+  es muy inportante el orden en q escribimos las media query siempre va primero los estilos por defecto(mobile,etc)y despues vamos
+  creciendo osea de celular a pc o tv porque si pusieramos los estilos del body por debajo de la media query se sobreescribiria
+  por la cascada
+  
+  nosotros cuando ponemos min-width: 480px le decimos que como minimo tiene que tener 480px osea que por debajo de esos pixeles
+  lo que pongamos dentro del media query no se va  a aplicar
+  
+  si pusieramos max-width:480px le estamos diciendo que como maximo tiene q tener 480px y por encima osea cuando sea mas ancho
+  y sobrepase esa medida no se aplicara ese estilo que pongamos dentro del query*/
+
+  /* TABLET */
+@media screen and (min-width: 480px)
+{
+    /* dentro va el selector y la propiedades que queremos modificar */
+    body
+    {
+        background-color: red;
+    }
+}
+
+/* ESCRITORIO */
+@media screen and (min-width: 1400px)
+{
+    /* dentro va el selector y la propiedades que queremos modificar */
+    body
+    {
+       
+        background-color: green;
+    }
+    /* en escritorio ponemos el menu en horizontal */
+    .menu
+    {
+        display: flex;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,41 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 100vh;/*para que quede al medio del body*/
+    background-image: radial-gradient(circle, purple,black);
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #eee;
+
+}
+.grid-container
+{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    
+
+}
+
+.grid__item
+{
+    border: 1px solid white;
+    color: inherit;
+    padding: 1rem;
+    font-size: 2rem;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* GRID TRACK: es la union de celdas concecutivas tanto horizontal como verticalmente y tienen que ser dos o mas,es decir,
+   mas de dos celdas consecutivas */
+.grid__item:first-child ,.grid__item:nth-child(2),.grid__item:nth-child(3)
+{
+    background-color: lime;
+}
+
+
+

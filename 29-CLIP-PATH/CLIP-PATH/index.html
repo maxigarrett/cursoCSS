@@ -1,0 +1,35 @@
+<!-- clip-path: es una mascara que oculta partes de una caja
+    circle(): dibuja un circulo, puede tener una medida fija, circle(100px o podemos especificar un centro con at, circle(100px
+    at medidax mediday | palabrasclavex palabrasclavey) palabra clave se refiere ah top bottom,etc
+
+elipse(): dibuja una elipse, funciona igual que el circulo, pero en este caso tenemos especificar 2 centros, el horizontal y el
+    vertical
+
+inset(): dibuja un borde transparente por dentro de la caja inset(all|y x|top x bottom| top left botoom rigth)
+    existe la opcion de redondear las esquinas, para ello despues de los valores en inset pondremos round
+    inset(.... round all |
+     top-left & botoom-rigth top-rigth & botoom-left | 1 solo valor en px se aplica a estos
+     top-left top-rigth & botoom-left botoom-rigth 3 valores
+     top-left top-rigth botoom-rigth  botoom-left) 4 valores 
+    
+polygon(): especifica una serie de puntos (minimo 3) para definir la zona visible siendo el punto 0 0 la esquina superior izquierda
+  clip-path: polygon(0 0, 100% 0, 0 100%); los puntos se especifican por parejas  ejeX & ejeY
+generador de clip.path: http://bennettfeely.com/clippy -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <div class="box">
+        <div class="box__item">
+            <img src="../CLIP-PATH/attachment.jpeg" alt="" class="img">
+        </div>
+    </div>
+</body>
+</html>

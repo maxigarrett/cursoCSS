@@ -1,0 +1,44 @@
+<!-- 
+    Ordenar elementos con grd-colum y grid-rows
+    
+    grid-column-star: establece desde que column-line tiene que empezar el elemento.
+    grid-column-end: establece hasta que column-line llega el elemnto.
+    grid-row-star: establece desde que row-line empezará el elemento.
+    grid-row-end: establece hasta que row-line llega el elemento.
+
+    Existe un shorthand que engloba las dos propiedades
+    grid-column: start/end
+    grid-row: star/end
+
+    tanto star como end admiten valores positivos,negativos y la palabra span
+    valores positivos: Empieza a contar las column-lines o las row-lines de izquierda a derecha.
+    valores negativos: Empieza a contar las column-lines o las row-lines de derecha a izquierda.
+    span: Establecemos cuantos columns ha de ocupar, span 3 es como decirle que ocupe 3 columnas.
+
+    tip: si ponemos en el valor end -1 llegará hasta al final.
+    -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid__item">A</div>
+        <div class="grid__item">B</div>
+        <div class="grid__item">C</div>
+        <div class="grid__item">D</div>
+        <div class="grid__item">E</div>
+        <div class="grid__item">F</div>
+        <div class="grid__item">G</div>
+        <div class="grid__item">H</div>
+        <div class="grid__item">I</div>
+        
+    </div>
+</body>
+</html>

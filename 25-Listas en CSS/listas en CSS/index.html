@@ -1,0 +1,54 @@
+<!-- 
+normalmente necesitamos resetear los estilos por defecto de las listas
+    margint-top:0;
+    margin-bottom:0;
+    margin-left:0;
+    list-style:none;
+
+hay tres propiedades para las listas, se pueden aplicar al padre o a los elemntos de la lista
+
+list-style-type: establece el estilo de viñeta
+    disc
+    circle
+    square
+    decimal
+    decimal-leading-zero
+    lower-roman
+    upper-roman
+    lower-greek
+    lower-latin
+    upper-latin
+    armenian
+    gregorian
+    lower-alpha
+    upper-alpha
+
+list-style-position: hace que las viñetas se coloquen por dentro o por fuera del elemnto
+    outside / inside
+
+list-style-image: pone una imagen en lugar de la viñeta, no se suele utilzar porque hay formas muchas mas eficientes de hacerlo
+    url(imagen)
+    el problema de esto es que la imagen tiene un tamañ definido muy grande por eso es poco eficiente unas de las formas eficientes es 
+    usando un pseudoelemnto visor
+
+normalmente se suele utilizar el shorthan list-style-->
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <ul class="list">
+        <li class="list__item">Item 1</li>
+        <li class="list__item">Item 2</li>
+        <li class="list__item">Item 3</li>
+        <li class="list__item">Item 4</li>
+        <li class="list__item">Item 5</li>
+    </ul>
+</body>
+</html>

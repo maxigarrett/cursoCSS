@@ -1,0 +1,78 @@
+/*la ESPECIFICIDAD es el peso que tiene un selector cuando hay conflicto de estilos cuendo estamos dando estilo
+ de dos formas distintas la especificidad se encarga o decide cual se aplic y cual no
+etiqueta tien un peso de 1
+clases y pseudoclases tienen un peso de 10
+los id tienen un peso de 100
+los estilos en linea tienen un peso de 1000
+cuando se utilisa !important esto gana a todo*/
+
+
+
+
+
+
+/*la HERENCIA se aplica con el valor abherit, esto obliga al elemento a heredar la propiedad de su elemento 
+mas cercano donde mas se utiliza es en un enlace dentro de un parrafo*/
+
+p 
+{
+    /*solo se pondra de color rojo el contenido de la etiqueta p y si hay una palabra encerrada en una 
+    etiqueta a por ejemplo a eso no le aplicarà porque esta dentro de a y no de p*/
+    color: red;
+    
+}
+a
+{
+    /*a hereda el color de su padre que en este caso es la etiqueta p por lo que el enlace se pintara de color rojo 
+    tambien y asi si cambiamos de color del p se aplica directamente a su hijo y no tener que cambir de color 
+    a los dos para que concidan*/
+    color: inherit;
+}
+
+
+
+/*CASCADA*/
+/*la CASCADA es el orden en el que se le aplicarà los estilos al ir leyendo el css. Los estilos que vienen despues
+sobreescriben a los anteriores*/
+
+#parrafo
+{
+    /*selector de id pesa mas que una etiqueta y selector de clase */
+    color: aqua;
+}
+
+p
+{
+    color: red;
+}
+
+.parrafo
+{
+    /*la cascada aca no vale porque el selector de clase pesa mas q la etiqueta en si*/
+    color: black;
+}
+
+p a
+{
+    color: inherit;
+}
+
+p
+{
+    /*primero el color es rojo pero como el codigo lee de arriba a bajo el ultimo que es este vuleve a cambiar
+    de color el parrafo  */
+    color: green;
+}
+
+p
+{
+    /*hay que fijarse donde se usa porque si queremos cambiar el color al parrafo a una parte no se podra porque
+    !important vale mas que todo los selectores por eso no se recomienda usarlo*/
+    color: green !important;
+}
+
+
+
+
+/*si utilisamos selectores de clase para dar estilo no dara conflicto casi nunca por eso selectores de etiqueta y 
+de id no se recomiendan mucho*/

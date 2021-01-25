@@ -1,0 +1,62 @@
+/* asi es la sintaxis de el pseudoelemnto selector de clase,etiqueta,id:: nombre de pseudoelemnto{estilos} 
+la pseudoclase first-letter hace referencia a la primera letra */
+.title::first-letter
+{
+    color: red;
+    font-size: 2em;
+}
+
+/* pondra de color azul la primera linea de texto si agandamos  o achicamos la pantalla y el texto se ajusta pero igualmente
+pondra de color azul automaticamnete siempre la primer linea de texto */
+.text::first-line
+{
+    color: blue;
+}
+
+/* a la hora de ir sellecionado se marcarà el texto y el fondo del color que digamos */
+.text::selection
+{
+    color: aqua;
+    background-color: black;
+}
+
+
+
+/* al espan al ser un elemnto en linea no funcionara los pseudoelementos pero si le ponemos un display:inline-block
+tomara las propiedades de elementos en bloque y funcionara */
+.inline
+{
+    display: inline-block;
+}
+.inline::first-letter
+{
+    
+    color: brown;
+    font-size: 2em;
+}
+
+
+/* son elementos que no existe en html y q por concecuencia no existe en el DOM(Modelo de Objetos del documento de JS que representa
+todo los elementos que existen en nuestro documento) por eso los pseudoelementos no pertenece al docmunento
+BEFORE se ubica antes del elemnto y AFTER despues del elemento */
+.dolar::before, .dolar::after
+{
+    /* campo obligatorio aunque no le pongamos nada y ubica el simbolo creado antes de lo que està escrito en esta etiqueta
+    no se podrà seleccionar ya que no pertence al DOM 
+    dentro de este content se podra dibujar imagenes,atributos,casi cualquier cosa */
+    content: '';
+
+    /* como son el linea por defecto tendremos que darle un display bloq para darle ancho y largo */
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+
+}
+
+
+
+/* .dolar::after
+{
+    content: '.00';
+} */

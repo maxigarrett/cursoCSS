@@ -1,0 +1,31 @@
+.slide
+{
+    height: 300px;
+    background-color: grey;
+    text-align: center;
+    line-height: 6em;
+}
+.menu
+{
+    background-color: darkcyan;
+    padding: .7em;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+    /* position stiky se va a comportar como position relative hasta que llegue a la posicion que le digamos  */
+    position: sticky;
+    /* significa que cuando el menu este a 20px del topautomaticamente va a cambiar a position fixed osea cuando agamos scroll
+    bajarà tambien el menu es decir antes de hacer tope arriba empesara a bajar cuando falten 20px para tocar el body la parte 
+    del top esto se puede hacer con JAVA SCRIPT */
+    /* top: 20px; */
+    top: 0;
+}
+
+.title
+{
+    margin: 0;
+}
+[class^="text"]
+{
+    width: 50%;
+}

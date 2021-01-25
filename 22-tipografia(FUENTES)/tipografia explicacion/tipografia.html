@@ -1,0 +1,99 @@
+<!-- 
+Especificación w3c:
+https://www.w3.org/Style/Examples/007/fonts.en.html
+https://www.w3.org/TR/CSS22/fonts.html#font-family-prop
+
+TIPOGRAFIA: A los tipos de letra que existen se les denomina fuentes o tipografía
+Familias tipográficas
+    Tienen nombre propio
+      Arial, Times New Roman, open sans, ubuntu
+     
+Familias genéricas o seguras
+    Su nombre se basa en sus características
+      serif: Tienen un adorno en los remates(adorno en la letra)
+      sans-serif: Tienen un corte seco en los remates(adorno en la letra)
+      cursive: emulan tipografia manuscrita
+      fantasy: Letra decorativa
+      monospace: Todos los caracteres tienen el mismo ancho
+FONT
+    font-family: Establece la familia tipográfica o la fuente
+        Se utiliza el nombre propio de la fuente o una familia genérica, se recomienda utilizar SIEMPRE fuentes de reserva 
+        ('Times New Roman', Times, serif) las fuentes reserva significa que si el primer valor la maquina del usuario no la 
+        encuentra tomara el segundo valor que en el ejemplo es Times y si no la tercera y asi sucesivamente todas las que queramos
+    
+    font-size: Establece el tamaño de fuente
+        Se define en unidades:(medidas relativas al documento)
+            *px: pixeles (medida absoluta porque al darle cierto pixeles siempre van a ser esos pixeles que le demos)
+            *em: medida relativa al contexto (al padre, es decir si dentro de un titulo H1 encerramos una parte del texto en un
+            espam y le damos una clase y el H1 ya tenia una medida de 2em si al espam le ponemos 2em tomara los 2 em del padre
+            que es el H1 y sumarà 2em mas que tiene el spam que es hijo de H1 ) el em se utiliza cuando no aya un padre que 
+            establezca una medida por defecto
+            *rem: medida relativa al html
+            *%: medida relativa al tamaño actual
+            
+            
+            (relativas al viewport)
+            vh: medida relativa al height del viewport(no se suele utilizar mucho)
+            vw: media relativa al width del viewport(no se suele utilizar mucho)
+            vmin: medida relativa al valor mínimo de viewport(se utiliza mucho en diseño responsive)
+            vmax: medida relativa al valor máximo de viewport(se utiliza mucho en diseño responsive)
+       
+    font-weight: Establece el grosor de la fuente
+        bold | normal | 100-900
+   
+   font-style: Establece el estilo de la tipografía
+        normal | italic | oblique
+
+
+
+    text-transform: convierte la letra en mayusculas o minusculas
+
+    text-aling: alinea el texto a la derecha,izquierda, justificado o centrado (center- left-rigth-justify*) solo funciona en
+    elemento en bloque /* text-align: justify; no se utiliza en desarrollo web queda feo */
+  
+    text-decoration:decora la letra con una linea
+        overline: dibuja la linea del link por arriba
+        line-trought: dibuja una linea en el medio del link como si lo tachara
+        underline: por defecto linea por debajo del link
+        none: niinguna decoracion
+
+    text-indent: hace una indentacion para temas estetico, osea mueve la primera linea de texto(solo elementos de bloque)
+
+    line-heigth:   determina el alto de la linea si queremos alinearlo al medio le damos los mismos pixeles de alto que tiene el box pero solo funcionacuando
+     tenemos elementos que ocupan una linea si escrivimos mas no funcionara ya que el texto
+    sobreante lo desplazará hacia abajo y tendriamos que agrenadar el alto de la caja
+    ya que otra linea ocupa 100px osea serian 200 pixeles si tuvieramos otros contnedor
+    con ese texto que se desplaza si estaria centrado */
+
+    letter-spacing: establece la separacion entre letras
+ -->
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tipografia</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 class="title">Tipografías y <span class="spam">textos</span></h1>
+    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci fugit provident magni quo, nesciunt
+         ad, delectus aut reiciendis consectetur vero ut eveniet earum commodi, veritatis laboriosam sapiente quos saepe iste.
+        </p>
+        
+
+        <button class="button">soy un boton</button>
+
+        <div class="box">
+          <div class="box__item">ITEM 1 jabdjfbadfnòad
+              opshdvkjvosdjvo`jsdvsovòsjdvdsñlvnñsldn
+          </div>
+          
+        </div>
+        <a href="#" class="link">Soy un botón</a>
+</body>
+</html>

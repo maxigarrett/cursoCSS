@@ -1,0 +1,43 @@
+<!-- *POSITION ABSOLUTE: el valor absolute hace que el elemento se coloque respecto a su contenedor posicionado mas cercano,
+    si no encuentra ninguno sera el viewport este es el espacio que tenemos disponible para la pagina es decir lo que seria el body
+lo que se dibuja en la pagina serà el viewport. Entonces si el contenedor que contenga postion absolute no encuntra otro contenedor 
+que lo tenga posicionado entonces su contexto serà el viewport
+
+*cuando le ponemos position absolute a un elemento, ese elemento, no conserva su espacio en el flujo. Todo el espacio que estuviera 
+reservado para ese elemnto desaparece y todo lo que estuviera debajo de ese elemnto va a subir porque el navegador va a interpretar
+que ahi ya no existe nada
+
+*si el elemento no tiene dimensiones declaradas sus dimenciones se ajustan al contenido,es decir, si tenemos un h1 y le ponemos 
+position absolute sus dimenciones ya no van hacer del 100%, van hacer de lo que ocupe el texto del h1
+
+*su punto de referencia no se modificarà aunque movamos el elemento esto es igual a position relative. Aunque movamos el elemnto
+el top,right,bottom,left seguirà en el mismo lugar -->
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>posicion absoluta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    
+    <header>
+
+    </header>
+
+    <body>
+        <div class="container">
+          <div class="box1"></div>
+          <!-- <p>texto de ejemplo</p> -->
+          <div class="box2"></div>
+          <div class="box3"></div>
+          <div class="box4"></div>
+          <div class="box5"></div>
+        </div>
+    </body>
+
+</body>
+</html>

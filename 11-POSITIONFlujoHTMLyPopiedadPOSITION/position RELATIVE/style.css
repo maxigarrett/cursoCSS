@@ -1,0 +1,37 @@
+[class^="box"]
+{
+    width: 250px;
+    height: 250px;
+    margin: 1em auto;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.box1
+{
+    background: lightgreen;
+    /* al poner position: relative podemos usar top,right,bottom, left..,etc */
+    position: relative;
+    /* la propiedades que mas valen son top y left osea si usamos esas primeras y despues bottom o right esstas
+    no se modificaria porque valen menos que las otras dos */
+    top: 90px; 
+    left: 50px;
+
+    /* z-index: 1;  al poner uno vale mas que la otra cja por defecto y se superpondra por arriba*/
+    /*no pasarà nada porque valen menos que top y left*/
+    right: 500px;
+    bottom: 1000px;
+
+
+}
+
+.box2
+{
+    /* al poner postion:relative en esta caja tambien se superpondra a la otra caja porque en el flujo de html esta
+    caja se escribio ultimo pero si le sacamos el postion se superpondra la otra... al estar los dos con
+    position el valor de z-index por defecto son los mismos osea "0" por lo cual pondra por encima a la ultima
+    caja pero si le ponemos a la primer caja z-index=1 aumentara y valdra mas la caja y se superpondrà a esta caja
+    en la que estamos */
+    position: relative;
+    background: lightcoral;
+}

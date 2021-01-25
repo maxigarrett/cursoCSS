@@ -1,0 +1,29 @@
+body
+{
+    /* para dar margen y se vea el titulo de h1  pero generarà un margen arriba y se desplazarà nuestro menu por eso
+    al tener fixed que es como un absolute ponemos top:0 y se ubicara arriba de todo respecto a el viewport o body
+    ya que no contiene otra caja se ubica respecto al ya mencionado body
+    este margen se genera del body respecto altitulo ya que manu tiene fixed*/
+    padding-top: 6em;
+}
+.menu
+{
+    background-color: darkcyan;
+    padding: .5em;
+    text-align: center;
+    font-size: 2em;
+    /* al poner fixed solo solo ocupara lo que ocupe el contenido por eso no cubrira el 100% del ancho pero la hacer scroll en la
+    pagina simpre se vera entonces le damos un width 100% para que cubra el todo el ancho pero tendrà un margen en la parte de 
+    porque el h1 tiene margen por defecto  y este menu al tener fixe es igual que absolute pierde o desaparece su posicion en el 
+     flujo osea el espacio reservado de este contenedor deaparece */
+    position: fixed;
+    width: 100%;
+    /* con top 0 se desplazara hacia arriba del todo de la pagina */
+    top: 0px;
+}
+
+/* sacamos el margen que tiene para que el menu se pueda ubicar arriba de todo */
+.title
+{
+    margin-top: 0;
+}
